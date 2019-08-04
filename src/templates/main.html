@@ -1,0 +1,236 @@
+---
+title: Главная
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "partials/_header.html" %}
+
+<!--start intro section-->
+
+{% import "data/main-data.html" as data %}
+
+<div class="intro">
+    <div class="slider owl-carousel">
+        {% for slider in data.sliders %}
+        <div class="slider__item" style="background-image: url({{slider.img}})">
+            <div class="container">
+                <div class="slider__content col-lg-12">
+                    <h2 class="slider__title">{{slider.title}}</h2>
+                    <span class="slider__desc">{{slider.desc}}</span>
+                    <div class="slider__info">
+                        <div class="slider__info__block">
+                            <span class="slider__info__block__icon">
+                                <img src="img/calendar.png" alt="calendar icon">
+                            </span>
+                            <span class="slider__info__block__text">{{slider.date}}</span>
+                        </div>
+                        <div class="slider__info__block">
+                            <span class="slider__info__block__icon">
+                                <img src="img/placeholder.png" alt="place icon">
+                            </span>
+                            <span class="slider__info__block__text">{{slider.place}}</span>
+                        </div>
+                        <div class="slider__info__block">
+                            <span class="slider__info__block__icon">
+                                <img src="img/tag.png" alt="tag icon">
+                            </span>
+                            <span class="slider__info__block__text">{{slider.price}}</span>
+                        </div>
+                    </div>
+                    <button class="btn btn--yellow">купить билет</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="slider-prev">{{mixins.icon('arrow-left')}}</div>
+    <div class="slider-next">{{mixins.icon('arrow-right')}}</div>
+    <div class="social">
+        <a href="" class="social__item">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="social__item">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="social__item">
+            <i class="fab fa-google-plus-g"></i>
+        </a>
+    </div>
+    <div class="container old-site">
+        <a href="" class="old-site__link">Старая версия сайта</a>
+    </div>
+</div>
+<!--end intro section-->
+
+<!--start posters section-->
+<div class="section posters">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <span class="section__desc">В ближайшее время</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 title-block">
+                <h3 class="title">Афиша</h3>
+                <div class="filter">
+                    <div class="filter__icon">
+                        <img src="img/calendar-black.png" alt="calendar icon">
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownStyles" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Стили
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownStyles">
+                            <button class="dropdown-item" type="button">any</button>
+                            <button class="dropdown-item" type="button">any</button>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownHalls" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Залы
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownHalls">
+                            <button class="dropdown-item" type="button">any</button>
+                            <button class="dropdown-item" type="button">any</button>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTypes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Типы
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownTypes">
+                            <button class="dropdown-item" type="button">any</button>
+                            <button class="dropdown-item" type="button">any</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="posters__wrap">
+            <div class="posters__calendar">
+
+            </div>
+            <div class="posters__main">
+                {% for poster in data.posters %}
+                <a href="" class="poster">
+                    <img src={{poster.img}} class="poster__img" alt="poster image">
+                    <div class="poster__details">
+                        <div class="poster__title">
+                            <span>{{poster.title}}</span>
+                        </div>
+                        <div class="poster__date-time">
+                            <span>{{poster.date}}</span>
+                            <br>
+                            <span>{{poster.time}}</span>
+                        </div>
+                        <div class="poster__place">
+                            <span>{{poster.place}}</span>
+                        </div>
+                        <button class="btn btn--white">купить</button>
+                    </div>
+                </a>
+                {% endfor %}
+                <div class="more">
+                    <button class="btn btn--yellow">
+                        Показать еще
+                        <span>{{mixins.icon('refresh')}}</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end posters section-->
+
+<!--start theaters section-->
+<div class="section theatres">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="title">Популярные театры Киева</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="pre-slider pre-slider-theaters owl-carousel">
+                    {% for theater in data.theaters %}
+                    <div class="pre-slider__item">
+                        <a href="">{{theater.title}}</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="pre-slider-theaters-prev">{{mixins.icon('arrow-left')}}</div>
+                <div class="pre-slider-theaters-next">{{mixins.icon('arrow-right')}}</div>
+            </div>
+        </div>
+        <div class="slider-medium slider-theaters owl-carousel">
+            {% for event in data.theaterEvents %}
+            <a href="" class="slider-medium__item">
+                <img src={{event.img}} alt="event poster">
+                <div class="slider-medium__content">
+                    <span class="slider-medium__title">{{event.title}}</span>
+                    <span class="slider-medium__desc">{{event.desc}}</span>
+                    <div class="slider-medium__date-time">
+                        <span>{{event.date}}</span>
+                        <br>
+                        <span>{{event.time}}</span>
+                    </div>
+                    <button class="btn btn--white">купить</button>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="slider-theaters-prev">{{mixins.icon('arrow-left')}}</div>
+        <div class="slider-theaters-next">{{mixins.icon('arrow-right')}}</div>
+    </div>
+</div>
+<!--end theater section-->
+
+<!--start places section-->
+<div class="section places">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="title">Популярные площадки Киева</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="pre-slider pre-slider-places owl-carousel">
+                    {% for place in data.places %}
+                    <div class="pre-slider__item">
+                        <a href="">{{place.title}}</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="pre-slider-places-prev">{{mixins.icon('arrow-left')}}</div>
+                <div class="pre-slider-places-next">{{mixins.icon('arrow-right')}}</div>
+            </div>
+        </div>
+        <div class="slider-medium slider-places owl-carousel">
+            {% for event in data.placeEvents %}
+            <a href="" class="slider-medium__item">
+                <img src={{event.img}} alt="event poster">
+                <div class="slider-medium__content">
+                    <span class="slider-medium__title">{{event.title}}</span>
+                    <div class="slider-medium__date-time">
+                        <span>{{event.date}}</span>
+                        <br>
+                        <span>{{event.time}}</span>
+                    </div>
+                    <span class="slider-medium__place">{{event.where}}</span>
+                    <button class="btn btn--white">купить</button>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="slider-places-prev">{{mixins.icon('arrow-left')}}</div>
+        <div class="slider-places-next">{{mixins.icon('arrow-right')}}</div>
+    </div>
+</div>
+<!--end places section-->
+
+{% endblock %}

@@ -1,0 +1,118 @@
+.header
+  overflow: hidden
+
+  .container
+    position: relative
+
+    &::after
+      content: ''
+      display: block
+      background: #1c222a
+      position: absolute
+      right: -100%
+      top: 0
+      bottom: 0
+      width: 100%
+      margin-right: 15px
+
+  &__navbar
+    display: flex
+    flex-wrap: nowrap
+    height: 80px
+    padding: 0
+
+  &__wrap
+    display: flex
+    width: 100%
+    height: 100%
+    align-items: center
+    background: #1C222A
+
+  &__navbar-nav
+    padding-left: 30px
+
+  .logo
+    display: flex
+    align-items: center
+    width: 230px
+    height: 80px
+    padding: 0 40px 0 0
+    margin: 0
+    overflow: hidden
+    img
+      width: 100%
+
+  &__navbar-collapse
+    height: 100%
+
+  &__nav-link
+    font-size: 14px
+    line-height: 19px
+    letter-spacing: 0.02em
+    color: #FFFFFF
+    text-transform: uppercase
+
+  &__action
+    display: flex
+    padding: 10px 0
+    line-height: 0
+
+    &--city,
+    &--lang
+      padding-bottom: 0
+
+    button
+      margin: 0 10px
+      color: #ffffff
+      text-transform: none
+      font-size: 14px
+      line-height: 16px
+
+.pre-header
+
+  .container
+
+    &::after
+      display: none
+
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__menu
+    display: flex
+    padding: 10px 0
+    margin-left: 30px
+
+    &__item
+      margin: 0 10px
+
+    &__link
+      font-size: 12px
+      line-height: 16px
+      letter-spacing: 0.02em
+      text-transform: uppercase
+      color: #000
+
+
+.phone
+  font-size: 14px
+  line-height: 19px
+  letter-spacing: 0.02em
+  color: #000
+
+.dropdown
+  button
+    margin: 0 10px
+    padding: 0
+    background: none
+    border: none
+
+    &:hover,
+    &:focus,
+    &:active
+      outline: none !important
+      background: none !important
+      border: none !important
+      box-shadow: none !important

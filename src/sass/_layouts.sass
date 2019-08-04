@@ -1,0 +1,405 @@
+// main page
+
+.intro
+  position: relative
+  
+.slider
+  width: 100%
+
+  &__item
+    background-size: cover
+    background-position: center
+    position: relative
+
+    &::after
+      content: ''
+      position: absolute
+      z-index: 1
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: linear-gradient(270deg, #1C222A 0%, rgba(71, 71, 71, 0.7) 48.62%, rgba(255, 255, 255, 0.3) 100%)
+      transform: rotate(-180deg)
+
+  &__content
+    padding: 93px 20px 130px 60px
+    position: relative
+    z-index: 2
+
+  &__title
+    font-size: 64px
+    line-height: 75px
+    letter-spacing: .02em
+    color: #fff
+
+  &__desc
+    font-size: 24px
+    line-height: 28px
+    letter-spacing: .02em
+    color: #fff
+
+  &__info
+    margin: 36px 0
+
+    &__block
+      margin: 9px 0
+      line-height: 21px
+
+      &__icon
+        display: inline-block
+        width: 20px
+        height: 20px
+        margin-right: 20px
+
+      &__text
+        font-size: 18px
+        letter-spacing: .02em
+        color: #fff
+
+  .owl-nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 1140px
+    width: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -100%)
+
+  .owl-prev
+    margin-left: -20px
+    color: #fff
+
+  .owl-next
+    margin-right: -20px
+    color: #fff
+
+  .btn--yellow
+    padding: 16px 50px
+
+.social
+  position: absolute
+  right: 10px
+  bottom: 30px
+  display: flex
+  flex-direction: column
+  z-index: 2
+
+  &__item
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 26px
+    height: 26px
+    margin: 5px 0
+    border: 2px solid #fff
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    border-radius: 50%
+
+    .fab
+      font-size: 12px
+      color: #fff
+
+.old-site
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 3
+  padding: 10px 30px
+  line-height: 0
+  text-align: right
+
+  &__link
+    display: inline-block
+    padding-bottom: 2px
+    font-size: 14px
+    line-height: 16px
+    color: #fff
+    border-bottom: 1px solid #ffffff
+    letter-spacing: 0.02em
+    
+    &:hover 
+      text-decoration: none
+      color: #fff
+
+.icon-arrow-left
+  stroke: #ffffff
+  fill: transparent
+  font-size: 50px
+
+.icon-arrow-right
+  stroke: #ffffff
+  fill: transparent
+  font-size: 50px
+
+.section
+  padding-top: 50px
+  padding-bottom: 30px
+
+  &__desc
+    font-size: 18px
+    line-height: 21px
+    padding-bottom: 2px
+    letter-spacing: 0.02em
+    color: #000000
+    border-bottom: 1px solid #000000
+
+  &.posters
+    .title-block
+      margin-top: 50px
+
+.title-block
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.title
+  font-size: 36px
+  line-height: 42px
+  letter-spacing: 0.02em
+
+.filter
+  display: flex
+  flex-direction: row
+  align-items: center
+
+  &__icon
+    width: 25px
+    height: 25px
+    margin-right: 10px
+
+  .dropdown
+    .btn
+      color: #000
+      margin: 0 15px
+      text-transform: none
+      font-size: 18px
+      line-height: 21px
+
+    &:last-child
+      .btn
+        margin-right: 0
+
+.posters
+
+  &__wrap
+    display: flex
+
+  &__calendar
+    flex: 1
+
+  &__main
+    display: flex
+    justify-content: flex-end
+    flex-wrap: wrap
+    flex: 6
+    margin-top: 50px
+
+.poster
+  width: 210px
+  margin: 8px 12px
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25)
+  line-height: 0
+  position: relative
+  transition: ease .3s
+  overflow: hidden
+
+  &:hover
+    box-shadow: 0x 4px 20px rgba(0, 0, 0, 0.7)
+
+    .poster__details
+      opacity: 1
+      transform: translateY(0)
+
+  &__details
+    display: flex
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: 100%
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    padding: 15px 15px 45px 15px
+    font-size: 14px
+    line-height: 16px
+    color: #000
+    text-align: center
+    background: linear-gradient(360deg, #FFB100 0%, rgba(196, 196, 196, 0.7) 100%)
+    opacity: 0
+    transform: translateY(100%)
+    transition: ease .3s
+
+    .btn
+      margin-top: 8px
+      padding: 7px 30px
+      font-size: 13px
+      line-height: 15px
+
+  &__title
+    font-size: 24px
+    line-height: 28px
+
+  &__date-time
+    margin: 10px 0
+
+  &__place
+    margin-bottom: 10px
+
+.more
+  display: block
+  width: 100%
+  margin-top: 50px
+  text-align: center
+
+  .btn
+    padding: 15px 50px
+    text-transform: none
+
+.pre-slider
+  margin: 40px 0
+  //.owl-stage
+  //  display: flex
+  //  border-bottom: 1px solid #C4C4C4
+
+  &__item
+    padding-bottom: 10px
+    font-size: 18px
+    line-height: 21px
+    //border-bottom: 1px solid #C4C4C4
+    transition: ease .3s
+
+    a
+      color: #000
+      text-decoration: none
+
+    &:hover
+      //font-weight: bold
+      //border-color: #FFB100
+
+  .owl-nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 1140px
+    width: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+    &.disabled
+      display: flex
+
+  .owl-prev
+    margin-left: -30px
+
+  .owl-next
+    margin-right: -30px
+
+.slider-medium
+
+  &__item
+    display: block
+    margin: 20px
+    position: relative
+    overflow: hidden
+    line-height: 0
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .25)
+    transition: ease .3s
+
+    &:hover
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7)
+
+      .slider-medium__content
+        opacity: 1
+        transform: translateY(0)
+
+  &__content
+    display: flex
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: 100%
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    padding: 15px 15px 75px 15px
+    font-size: 14px
+    line-height: 16px
+    color: #000
+    text-align: center
+    background: linear-gradient(360deg, #FFB100 0%, rgba(196, 196, 196, 0.7) 100%)
+    opacity: 0
+    transform: translateY(100%)
+    transition: ease .3s
+
+    .btn
+      margin-top: 8px
+      padding: 15px 40px
+      font-size: 18px
+      line-height: 21px
+      letter-spacing: 0.02em
+
+  &__title
+    font-size: 36px
+    line-height: 42px
+    letter-spacing: 0.02em
+
+  &__desc
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: 0.02em
+
+  &__date-time
+    margin: 35px 0
+    font-size: 14px
+    line-height: 16px
+    letter-spacing: 0.02em
+
+  &__place
+    margin-bottom: 20px
+
+  .owl-nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 1140px
+    width: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+    &.disabled
+      display: flex
+
+  .owl-prev
+    margin-left: -50px
+
+  .owl-next
+    margin-right: -50px
+
+.slider-theaters-prev,
+.slider-theaters-next,
+.slider-places-prev,
+.slider-places-next
+  .icon-arrow-left,
+  .icon-arrow-right
+    stroke: #000000
+    font-size: 54px
+
+.pre-slider-theaters-prev,
+.pre-slider-theaters-next,
+.pre-slider-places-prev,
+.pre-slider-places-next
+  .icon-arrow-left,
+  .icon-arrow-right
+    stroke: #000000
+    font-size: 27px
