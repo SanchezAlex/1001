@@ -22,12 +22,17 @@
                 <img src="img/logo.png" alt="logo">
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <!--<span class="navbar-toggler-icon"></span>-->
+                <!--<span class="navbar-line">-->
+                <svg class="icon icon-burger">
+                  <use xlink:href="img/sprite.svg#icon-burger"></use>
+                </svg>
+                <!--</span>-->
               </button>
               <div class="header__wrap col-lg-9">
                 <div class="collapse navbar-collapse header__navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav header__navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                       <a class="nav-link header__nav-link" href="#">Концерты<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
@@ -39,14 +44,71 @@
                     <li class="nav-item">
                       <a class="nav-link header__nav-link" href="#">Детям</a>
                     </li>
+                    <li class="nav-item-more">
+                      <span>...</span>
+                      <ul class="more-items">
+                        <li class="nav-item">
+                          <a class="nav-link header__nav-link" href="#">Филармония</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link header__nav-link" href="#">Цирк</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link header__nav-link" href="#">Экскурсии</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link header__nav-link" href="#">Выставки</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link header__nav-link" href="#">Конференции</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link header__nav-link" href="#">Дельфинарий</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link header__nav-link" href="#">Юмор</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item-pre-header">
+                      <ul class="pre-header">
+                        <li class="pre-header__item">
+                          <a href="" class="pre-header__link">О нас</a>
+                        </li>
+                        <li class="pre-header__item">
+                          <a href="" class="pre-header__link">Как заказать</a>
+                        </li>
+                        <li class="pre-header__item">
+                          <a href="" class="pre-header__link">Наши кассы</a>
+                        </li>
+                        <li class="pre-header__item">
+                          <a href="" class="pre-header__link">Отзывы</a>
+                        </li>
+                        <li class="pre-header__item">
+                          <a href="" class="pre-header__link">Организаторам</a>
+                        </li>
+                      </ul>
+                    </li>
                   </ul>
+                  <a href="tel:+380442218184" class="phone">
+                    <span class="phone__icon">
+                      <svg class="icon icon-phone">
+                        <use xlink:href="img/sprite.svg#icon-phone"></use>
+                      </svg>
+                    </span>
+                    <span class="phone__text">(044) 221 81 84</span>
+                  </a>
                 </div>
                 <div class="header__action header__action--search">
-                  <button>
-                    <img src="img/search.png" alt="search icon">
+                  <button class="header__action__btn">
+                    <svg class="icon icon-search">
+                      <use xlink:href="img/sprite.svg#icon-search"></use>
+                    </svg>
                   </button>
-                  <button>
-                    <img src="img/calendar.png" alt="calendar icon">
+                  <button class="header__action__btn">
+                    <svg class="icon icon-calendar">
+                      <use xlink:href="img/sprite.svg#icon-calendar"></use>
+                    </svg>
                   </button>
                 </div>
                 <div class="header__action header__action--city">
@@ -69,36 +131,26 @@
                   </div>
                 </div>
                 <div class="header__action header__action--account">
-                  <button>
-                    <img src="img/profile.png" alt="profile icon">
+                  <a href="tel:+380442218184" class="phone">
+                    <span class="phone__icon">
+                      <svg class="icon icon-phone">
+                        <use xlink:href="img/sprite.svg#icon-phone"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <button class="header__action__btn" style="display: none;">
+                    <svg class="icon icon-profile">
+                      <use xlink:href="img/sprite.svg#icon-profile"></use>
+                    </svg>
                   </button>
-                  <button>
-                    <img src="img/shopping-cart.png" alt="cart icon">
+                  <button class="header__action__btn">
+                    <svg class="icon icon-shopping-cart">
+                      <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                    </svg>
                   </button>
                 </div>
               </div>
             </nav>
-          </div>
-        </div>
-        <div class="pre-header">
-          <div class="row">
-            <div class="container">
-              <div class="col-lg-9 pre-header__wrap ml-auto">
-                <ul class="pre-header__menu">
-                  <li class="pre-header__menu__item">
-                    <a href="" class="pre-header__menu__link">О нас</a></li>
-                  <li class="pre-header__menu__item">
-                    <a href="" class="pre-header__menu__link">Как заказать</a></li>
-                  <li class="pre-header__menu__item">
-                    <a href="" class="pre-header__menu__link">Наши кассы</a></li>
-                  <li class="pre-header__menu__item">
-                    <a href="" class="pre-header__menu__link">Отзывы</a></li>
-                  <li class="pre-header__menu__item">
-                    <a href="" class="pre-header__menu__link">Организаторам</a></li>
-                </ul>
-                <a href="tel:+380442218184" class="phone">(044) 221 81 84</a>
-              </div>
-            </div>
           </div>
         </div>
       </header>
@@ -223,8 +275,8 @@
       <div class="section posters">
         <div class="container">
           <div class="row">
-            <div class="col-lg-12">
-              <span class="section__desc">В ближайшее время</span>
+            <div class="col-lg-12 section__desc">
+              <span class="">В ближайшее время</span>
             </div>
           </div>
           <div class="row">
@@ -232,7 +284,9 @@
               <h3 class="title">Афиша</h3>
               <div class="filter">
                 <div class="filter__icon">
-                  <img src="img/calendar-black.png" alt="calendar icon">
+                  <svg class="icon icon-calendar">
+                    <use xlink:href="img/sprite.svg#icon-calendar"></use>
+                  </svg>
                 </div>
                 <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownStyles" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Стили </button>
@@ -487,6 +541,45 @@
                 <button class="btn btn--white">купить</button>
               </div>
             </a>
+            <a href="" class="slider-medium__item">
+              <img src=img/theaters/theater.jpg alt="event poster">
+              <div class="slider-medium__content">
+                <span class="slider-medium__title">Баядера</span>
+                <span class="slider-medium__desc">Оперетта в 2 действиях</span>
+                <div class="slider-medium__date-time">
+                  <span>07.11.2019</span>
+                  <br>
+                  <span>19:00</span>
+                </div>
+                <button class="btn btn--white">купить</button>
+              </div>
+            </a>
+            <a href="" class="slider-medium__item">
+              <img src=img/theaters/operetta.jpg alt="event poster">
+              <div class="slider-medium__content">
+                <span class="slider-medium__title">Баядера</span>
+                <span class="slider-medium__desc">Оперетта в 2 действиях</span>
+                <div class="slider-medium__date-time">
+                  <span>12.12.2019</span>
+                  <br>
+                  <span>18:00</span>
+                </div>
+                <button class="btn btn--white">купить</button>
+              </div>
+            </a>
+            <a href="" class="slider-medium__item">
+              <img src=img/theaters/opera.jpg alt="event poster">
+              <div class="slider-medium__content">
+                <span class="slider-medium__title">Баядера</span>
+                <span class="slider-medium__desc">Оперетта в 2 действиях</span>
+                <div class="slider-medium__date-time">
+                  <span>02.12.2019</span>
+                  <br>
+                  <span>20:00</span>
+                </div>
+                <button class="btn btn--white">купить</button>
+              </div>
+            </a>
           </div>
           <div class="slider-theaters-prev">
             <svg class="icon icon-arrow-left">
@@ -577,6 +670,45 @@
                 <button class="btn btn--white">купить</button>
               </div>
             </a>
+            <a href="" class="slider-medium__item">
+              <img src=img/places/place-1.jpg alt="event poster">
+              <div class="slider-medium__content">
+                <span class="slider-medium__title">Diare Straits</span>
+                <div class="slider-medium__date-time">
+                  <span>07.11.2019</span>
+                  <br>
+                  <span>19:00</span>
+                </div>
+                <span class="slider-medium__place">Дворец Украина</span>
+                <button class="btn btn--white">купить</button>
+              </div>
+            </a>
+            <a href="" class="slider-medium__item">
+              <img src=img/places/place-2.jpg alt="event poster">
+              <div class="slider-medium__content">
+                <span class="slider-medium__title">Pianoбой</span>
+                <div class="slider-medium__date-time">
+                  <span>12.12.2019</span>
+                  <br>
+                  <span>18:00</span>
+                </div>
+                <span class="slider-medium__place">Дворец Украина</span>
+                <button class="btn btn--white">купить</button>
+              </div>
+            </a>
+            <a href="" class="slider-medium__item">
+              <img src=img/places/place-3.jpg alt="event poster">
+              <div class="slider-medium__content">
+                <span class="slider-medium__title">Ara</span>
+                <div class="slider-medium__date-time">
+                  <span>02.12.2019</span>
+                  <br>
+                  <span>20:00</span>
+                </div>
+                <span class="slider-medium__place">Дворец Украина</span>
+                <button class="btn btn--white">купить</button>
+              </div>
+            </a>
           </div>
           <div class="slider-places-prev">
             <svg class="icon icon-arrow-left">
@@ -591,6 +723,161 @@
         </div>
       </div>
       <!--end places section-->
+      <!--start events for kids section-->
+      <div class="section kids">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <h3 class="title">Популярные мероприятия для детей</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="pre-slider pre-slider-kids owl-carousel">
+                <div class="pre-slider__item">
+                  <a href="">Киевский национальный цирк</a>
+                </div>
+                <div class="pre-slider__item">
+                  <a href="">Театр &quot;Божа Корівка&quot;</a>
+                </div>
+                <div class="pre-slider__item">
+                  <a href="">Cпектакли и концерты для детей</a>
+                </div>
+                <div class="pre-slider__item">
+                  <a href="">Театр &quot;Божа Корівка&quot;</a>
+                </div>
+              </div>
+              <div class="pre-slider-kids-prev">
+                <svg class="icon icon-arrow-left">
+                  <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                </svg>
+              </div>
+              <div class="pre-slider-kids-next">
+                <svg class="icon icon-arrow-right">
+                  <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="slider-medium slider-kids owl-carousel">
+            <a href="" class="slider-medium__item">
+              <img src=img/for-kids/place-1.jpg alt="event poster">
+              <div class="slider-medium__content">
+                <span class="slider-medium__title">Спектакли и концерты для детей</span>
+                <button class="btn btn--white">купить</button>
+              </div>
+            </a>
+            <a href="" class="slider-medium__item">
+              <img src=img/for-kids/place-2.jpg alt="event poster">
+              <div class="slider-medium__content">
+                <span class="slider-medium__title">Концерты для детей</span>
+                <button class="btn btn--white">купить</button>
+              </div>
+            </a>
+            <a href="" class="slider-medium__item">
+              <img src=img/for-kids/place-1.jpg alt="event poster">
+              <div class="slider-medium__content">
+                <span class="slider-medium__title">Фестивали для детей</span>
+                <button class="btn btn--white">купить</button>
+              </div>
+            </a>
+            <a href="" class="slider-medium__item">
+              <img src=img/for-kids/place-1.jpg alt="event poster">
+              <div class="slider-medium__content">
+                <span class="slider-medium__title">Спектакли и концерты для детей</span>
+                <button class="btn btn--white">купить</button>
+              </div>
+            </a>
+            <a href="" class="slider-medium__item">
+              <img src=img/for-kids/place-2.jpg alt="event poster">
+              <div class="slider-medium__content">
+                <span class="slider-medium__title">Концерты для детей</span>
+                <button class="btn btn--white">купить</button>
+              </div>
+            </a>
+            <a href="" class="slider-medium__item">
+              <img src=img/for-kids/place-1.jpg alt="event poster">
+              <div class="slider-medium__content">
+                <span class="slider-medium__title">Фестивали для детей</span>
+                <button class="btn btn--white">купить</button>
+              </div>
+            </a>
+          </div>
+          <div class="slider-kids-prev">
+            <svg class="icon icon-arrow-left">
+              <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+            </svg>
+          </div>
+          <div class="slider-kids-next">
+            <svg class="icon icon-arrow-right">
+              <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!--end events for kids-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row footer__wrap">
+            <div class="col-lg-3 footer__item">
+              <div class="copyright">
+                <p>© 1001bilet.ua</p>
+                <a href="">Все права защищены.</a>
+              </div>
+              <div class="social">
+                <a href="" class="social__item">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="social__item">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="social__item">
+                  <i class="fab fa-google-plus-g"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 footer__item">
+              <ul class="list-unstyled">
+                <li>
+                  <a class="link" href="">Публичная оферта</a>
+                </li>
+                <li>
+                  <a class="link" href="">Концерты</a>
+                </li>
+                <li>
+                  <a class="link" href="">Театры Киева</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 footer__item">
+              <ul class="list-unstyled">
+                <li>
+                  <a class="link" href="">Гастрольные спектакли</a>
+                </li>
+                <li>
+                  <a class="link" href="">Cпектакли для детей</a>
+                </li>
+                <li>
+                  <a class="link" href="">Цирк</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 footer__item">
+              <ul class="list-unstyled">
+                <li>
+                  <a class="link" href="">Концертные залы</a>
+                </li>
+                <li>
+                  <a class="link" href="">Карта сайта</a>
+                </li>
+                <li>
+                  <a class="link" href="">Архив событий</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

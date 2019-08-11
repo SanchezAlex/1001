@@ -7,12 +7,15 @@
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <!--<span class="navbar-toggler-icon"></span>-->
+                <!--<span class="navbar-line">-->
+                    {{mixins.icon('burger')}}
+                <!--</span>-->
             </button>
             <div class="header__wrap col-lg-9">
                 <div class="collapse navbar-collapse header__navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav header__navbar-nav mr-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link header__nav-link" href="#">Концерты<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
@@ -24,14 +27,63 @@
                         <li class="nav-item">
                             <a class="nav-link header__nav-link" href="#">Детям</a>
                         </li>
+                        <li class="nav-item-more">
+                            <span>...</span>
+                            <ul class="more-items">
+                                <li class="nav-item">
+                                    <a class="nav-link header__nav-link" href="#">Филармония</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link header__nav-link" href="#">Цирк</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link header__nav-link" href="#">Экскурсии</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link header__nav-link" href="#">Выставки</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link header__nav-link" href="#">Конференции</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link header__nav-link" href="#">Дельфинарий</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link header__nav-link" href="#">Юмор</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item-pre-header">
+                            <ul class="pre-header">
+                                <li class="pre-header__item">
+                                    <a href="" class="pre-header__link">О нас</a>
+                                </li>
+                                <li class="pre-header__item">
+                                    <a href="" class="pre-header__link">Как заказать</a>
+                                </li>
+                                <li class="pre-header__item">
+                                    <a href="" class="pre-header__link">Наши кассы</a>
+                                </li>
+                                <li class="pre-header__item">
+                                    <a href="" class="pre-header__link">Отзывы</a>
+                                </li>
+                                <li class="pre-header__item">
+                                    <a href="" class="pre-header__link">Организаторам</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
+                    <a href="tel:+380442218184" class="phone">
+                        <span class="phone__icon">{{mixins.icon('phone')}}</span>
+                        <span class="phone__text">(044) 221 81 84</span>
+                    </a>
                 </div>
                 <div class="header__action header__action--search">
-                    <button>
-                        <img src="img/search.png" alt="search icon">
+                    <button class="header__action__btn">
+                        {{mixins.icon('search')}}
                     </button>
-                    <button>
-                        <img src="img/calendar.png" alt="calendar icon">
+                    <button class="header__action__btn">
+                        {{mixins.icon('calendar')}}
                     </button>
                 </div>
                 <div class="header__action header__action--city">
@@ -58,36 +110,18 @@
                     </div>
                 </div>
                 <div class="header__action header__action--account">
-                    <button>
-                        <img src="img/profile.png" alt="profile icon">
+                    <a href="tel:+380442218184" class="phone">
+                        <span class="phone__icon">{{mixins.icon('phone')}}</span>
+                    </a>
+                    <button class="header__action__btn" style="display: none;">
+                        {{mixins.icon('profile')}}
                     </button>
-                    <button>
-                        <img src="img/shopping-cart.png" alt="cart icon">
+                    <button class="header__action__btn">
+                        {{mixins.icon('shopping-cart')}}
                     </button>
                 </div>
             </div>
         </nav>
-        </div>
-    </div>
-    <div class="pre-header">
-        <div class="row">
-            <div class="container">
-                <div class="col-lg-9 pre-header__wrap ml-auto">
-                    <ul class="pre-header__menu">
-                        <li class="pre-header__menu__item">
-                            <a href="" class="pre-header__menu__link">О нас</a></li>
-                        <li class="pre-header__menu__item">
-                            <a href="" class="pre-header__menu__link">Как заказать</a></li>
-                        <li class="pre-header__menu__item">
-                            <a href="" class="pre-header__menu__link">Наши кассы</a></li>
-                        <li class="pre-header__menu__item">
-                            <a href="" class="pre-header__menu__link">Отзывы</a></li>
-                        <li class="pre-header__menu__item">
-                            <a href="" class="pre-header__menu__link">Организаторам</a></li>
-                    </ul>
-                    <a href="tel:+380442218184" class="phone">(044) 221 81 84</a>
-                </div>
-            </div>
         </div>
     </div>
 </header>

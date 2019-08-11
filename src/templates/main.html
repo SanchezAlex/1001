@@ -68,8 +68,8 @@
 <div class="section posters">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <span class="section__desc">В ближайшее время</span>
+            <div class="col-lg-12 section__desc">
+                <span class="">В ближайшее время</span>
             </div>
         </div>
         <div class="row">
@@ -77,7 +77,7 @@
                 <h3 class="title">Афиша</h3>
                 <div class="filter">
                     <div class="filter__icon">
-                        <img src="img/calendar-black.png" alt="calendar icon">
+                        {{mixins.icon('calendar')}}
                     </div>
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownStyles" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -232,5 +232,45 @@
     </div>
 </div>
 <!--end places section-->
+
+<!--start events for kids section-->
+<div class="section kids">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="title">Популярные мероприятия для детей</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="pre-slider pre-slider-kids owl-carousel">
+                    {% for place in data.kidsPlaces %}
+                    <div class="pre-slider__item">
+                        <a href="">{{place.title}}</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="pre-slider-kids-prev">{{mixins.icon('arrow-left')}}</div>
+                <div class="pre-slider-kids-next">{{mixins.icon('arrow-right')}}</div>
+            </div>
+        </div>
+        <div class="slider-medium slider-kids owl-carousel">
+            {% for event in data.kidsEvents %}
+            <a href="" class="slider-medium__item">
+                <img src={{event.img}} alt="event poster">
+                <div class="slider-medium__content">
+                    <span class="slider-medium__title">{{event.title}}</span>
+                    <button class="btn btn--white">купить</button>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="slider-kids-prev">{{mixins.icon('arrow-left')}}</div>
+        <div class="slider-kids-next">{{mixins.icon('arrow-right')}}</div>
+    </div>
+</div>
+<!--end events for kids-->
+
+{% include "partials/_footer.html" %}
 
 {% endblock %}
