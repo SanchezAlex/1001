@@ -1,10 +1,11 @@
 import $ from 'jquery';
 import 'owl.carousel';
+import 'bootstrap';
 
 $(document).ready(function() {
 
   // slider for intro block
-  $('.slider').owlCarousel({
+  const optionsIntroSlider ={
     loop: true,
     margin: 0,
     nav: true,
@@ -14,94 +15,154 @@ $(document).ready(function() {
     navText: [$('.slider-prev'), $('.slider-next')],
     autoplayTimeout: 4000,
     smartSpeed: 1000
-  });
+  };
+
+  $('.slider').owlCarousel(optionsIntroSlider);
 
   // pre-slider for theaters block
-  $('.pre-slider-theaters').owlCarousel({
+  const optionsPreTheaters = {
     loop: true,
     margin: 40,
     nav: true,
     dots: false,
-    center:true,
+    center: true,
     navText: [$('.pre-slider-theaters-prev'), $('.pre-slider-theaters-next')],
     smartSpeed: 1000,
-    responsive:{
-      0:{
+    responsive: {
+      0: {
         items: 2
       },
-      600:{
+      600: {
         items: 3
       },
-      1000:{
-        items: 4
+      1000: {
+        items: 3
       }
     },
-  });
+  };
+
+  $('.pre-slider-theaters').owlCarousel(optionsPreTheaters);
 
   // slider for theaters block
-  $('.slider-theaters').owlCarousel({
+  const optionsTheatersSlider = {
     loop: true,
-    margin: 30,
     nav: true,
     dots: true,
-    items: 3,
     navText: [$('.slider-theaters-prev'), $('.slider-theaters-next')],
     smartSpeed: 1000,
-    responsive:{
-      0:{
+    responsive: {
+      0: {
+        dotsEach: 1,
         items: 1
       },
-      600:{
+      600: {
+        dotsEach: 1,
         items: 2
       },
-      1000:{
+      1000: {
+        dotsEach: 1,
         items: 3
       }
     }
-  });
+  };
+
+  $('.slider-theaters').owlCarousel(optionsTheatersSlider);
 
   // pre-slider for places block
-  $('.pre-slider-places').owlCarousel({
+  const optionsPrePlaces = {
     loop: true,
     margin: 40,
     nav: true,
     dots: false,
-    center:true,
+    center: true,
     navText: [$('.pre-slider-places-prev'), $('.pre-slider-places-next')],
     smartSpeed: 1000,
-    responsive:{
-      0:{
+    responsive: {
+      0: {
         items: 2
       },
-      600:{
+      600: {
         items: 3
       },
-      1000:{
-        items: 4
+      1000: {
+        items: 3
       }
     },
-  });
+  };
+
+  $('.pre-slider-places').owlCarousel(optionsPrePlaces);
 
   // slider for places block
-  $('.slider-places').owlCarousel({
+  const optionsPlacesSlider = {
     loop: true,
-    margin: 30,
     nav: true,
     dots: true,
-    items: 3,
     navText: [$('.slider-places-prev'), $('.slider-places-next')],
     smartSpeed: 1000,
-    responsive:{
-      0:{
+    responsive: {
+      0: {
+        dotsEach: 1,
         items: 1
       },
-      600:{
+      600: {
+        dotsEach: 1,
         items: 2
       },
-      1000:{
+      1000: {
+        dotsEach: 1,
         items: 3
       }
     }
-  });
+  };
+
+  $('.slider-places').owlCarousel(optionsPlacesSlider);
+
+  // pre-slider for kids places block
+  const optionsPreKids = {
+    loop: true,
+    margin: 40,
+    nav: true,
+    dots: false,
+    center: true,
+    navText: [$('.pre-slider-kids-prev'), $('.pre-slider-kids-next')],
+    smartSpeed: 1000,
+    responsive: {
+      0: {
+        items: 2
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 3
+      }
+    }
+  };
+
+  $('.pre-slider-kids').owlCarousel(optionsPreKids);
+
+  // slider for kids places block
+  const optionsKidsSlider = {
+    loop: true,
+    nav: true,
+    navText: [$('.slider-kids-prev'), $('.slider-kids-next')],
+    smartSpeed: 1000,
+    responsive: {
+      0: {
+        dotsEach: 1,
+        items: 1
+      },
+      600: {
+        dotsEach: 1,
+        items: 2
+      },
+      1000: {
+        dotsEach: 1,
+        items: 3
+      }
+    }
+  };
+
+  $('.slider-kids').owlCarousel(optionsKidsSlider);
 
 });

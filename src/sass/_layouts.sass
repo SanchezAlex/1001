@@ -57,24 +57,25 @@
         letter-spacing: .02em
         color: #fff
 
-  .owl-nav
-    display: flex
-    align-items: center
-    justify-content: space-between
-    max-width: 1140px
-    width: 100%
+  .owl-prev
     position: absolute
     top: 50%
-    left: 50%
-    transform: translate(-50%, -100%)
-
-  .owl-prev
-    margin-left: -20px
+    left: 10%
+    transform: translate(50%, -100%)
     color: #fff
+
+    +r(1445)
+      left: 5%
 
   .owl-next
-    margin-right: -20px
+    position: absolute
+    top: 50%
+    right: 10%
+    transform: translate(-50%, -100%)
     color: #fff
+
+    +r(1445)
+      right: 5%
 
   .btn--yellow
     padding: 16px 50px
@@ -93,7 +94,7 @@
     justify-content: center
     width: 26px
     height: 26px
-    margin: 5px 0
+    margin: 5px
     border: 2px solid #fff
     -webkit-border-radius: 50%
     -moz-border-radius: 50%
@@ -146,21 +147,38 @@
     padding-bottom: 2px
     letter-spacing: 0.02em
     color: #000000
-    border-bottom: 1px solid #000000
+
+    +r(740)
+      text-align: right
+
+    span
+      border-bottom: 1px solid #000000
+
+    +r(990)
+
 
   &.posters
     .title-block
       margin-top: 50px
+
+  &.kids
+    padding-bottom: 60px
 
 .title-block
   display: flex
   justify-content: space-between
   align-items: center
 
+  +r(520)
+    flex-direction: column
+
 .title
   font-size: 36px
   line-height: 42px
   letter-spacing: 0.02em
+
+  +r(990)
+    font-size: 24px
 
 .filter
   display: flex
@@ -168,9 +186,12 @@
   align-items: center
 
   &__icon
-    width: 25px
-    height: 25px
     margin-right: 10px
+
+    .icon
+      width: 25px
+      height: 25px
+      fill: #000000
 
   .dropdown
     .btn
@@ -192,6 +213,9 @@
   &__calendar
     flex: 1
 
+    +r(520)
+      display: none
+
   &__main
     display: flex
     justify-content: flex-end
@@ -208,12 +232,30 @@
   transition: ease .3s
   overflow: hidden
 
+  +r(520)
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      background: linear-gradient(270deg, #000000 0%, rgba(255, 255, 255, 0) 110%)
+
+  +r(520)
+    width: 100%
+
   &:hover
-    box-shadow: 0x 4px 20px rgba(0, 0, 0, 0.7)
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7)
 
     .poster__details
       opacity: 1
       transform: translateY(0)
+
+  &__img
+
+    +r(520)
+      width: 50%
 
   &__details
     display: flex
@@ -241,6 +283,21 @@
       font-size: 13px
       line-height: 15px
 
+      +r(520)
+        background: #FFB100
+
+    +r(520)
+      padding: 10px
+      justify-content: center
+      opacity: 1
+      transform: none
+      width: 50%
+      background: none
+      right: 0
+      left: auto
+      color: #ffffff
+      z-index: 2
+
   &__title
     font-size: 24px
     line-height: 28px
@@ -258,20 +315,25 @@
   text-align: center
 
   .btn
+    display: inline-flex
+    align-items: center
     padding: 15px 50px
     text-transform: none
 
+  .icon
+    margin-left: 15px
+    width: 25px
+    height: 25px
+
 .pre-slider
   margin: 40px 0
-  //.owl-stage
-  //  display: flex
-  //  border-bottom: 1px solid #C4C4C4
 
   &__item
+    display: inline-block
     padding-bottom: 10px
     font-size: 18px
     line-height: 21px
-    //border-bottom: 1px solid #C4C4C4
+    border-bottom: 1px solid #C4C4C4
     transition: ease .3s
 
     a
@@ -279,8 +341,11 @@
       text-decoration: none
 
     &:hover
-      //font-weight: bold
-      //border-color: #FFB100
+      font-weight: bold
+      border-color: #FFB100
+
+  .owl-item
+    text-align: center
 
   .owl-nav
     display: flex
@@ -313,6 +378,21 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, .25)
     transition: ease .3s
 
+    +r(520)
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        background: linear-gradient(270deg, #000000 0%, rgba(255, 255, 255, 0) 110%)
+
+    img
+
+      +r(520)
+        width: 50% !important
+
     &:hover
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7)
 
@@ -340,12 +420,32 @@
     transform: translateY(100%)
     transition: ease .3s
 
+    +r(767)
+      padding: 10px
+      justify-content: center
+
+    +r(520)
+      opacity: 1
+      transform: none
+      width: 50%
+      background: none
+      right: 0
+      left: auto
+      color: #ffffff
+      z-index: 2
+
     .btn
       margin-top: 8px
       padding: 15px 40px
       font-size: 18px
       line-height: 21px
       letter-spacing: 0.02em
+
+      +r(520)
+        padding: 7px 30px
+        font-size: 13px
+        line-height: 15px
+        background: #FFB100
 
   &__title
     font-size: 36px
@@ -366,17 +466,6 @@
   &__place
     margin-bottom: 20px
 
-  .owl-nav
-    display: flex
-    align-items: center
-    justify-content: space-between
-    max-width: 1140px
-    width: 100%
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-
     &.disabled
       display: flex
 
@@ -386,20 +475,74 @@
   .owl-next
     margin-right: -50px
 
+  .owl-dots
+    display: flex
+    justify-content: center
+    margin-top: 10px
+
+  .owl-dot
+    display: inline-block
+    width: 15px
+    height: 15px
+    margin: 0 5px
+    background-color: #C4C4C4
+
+    +r(1025)
+      width: 10px
+      height: 10px
+
+    &.active
+      background-color: #000000
+
 .slider-theaters-prev,
-.slider-theaters-next,
 .slider-places-prev,
-.slider-places-next
-  .icon-arrow-left,
+.slider-kids-prev
+  position: absolute
+  top: 45%
+  left: -50px
+  transform: translate(0, -50%)
+  .icon-arrow-left
+    stroke: #000000
+    font-size: 54px
+
+.slider-theaters-next,
+.slider-places-next,
+.slider-kids-next
+  position: absolute
+  top: 45%
+  right: -50px
+  transform: translate(0, -50%)
   .icon-arrow-right
     stroke: #000000
     font-size: 54px
 
 .pre-slider-theaters-prev,
-.pre-slider-theaters-next,
 .pre-slider-places-prev,
-.pre-slider-places-next
-  .icon-arrow-left,
+.pre-slider-kids-prev
+  position: absolute
+  top: 50%
+  left: -30px
+  transform: translate(0, -50%)
+  .icon-arrow-left
+    stroke: #000000
+    font-size: 27px
+
+.pre-slider-theaters-next,
+.pre-slider-places-next,
+.pre-slider-kids-next
+  position: absolute
+  top: 50%
+  right: -30px
+  transform: translate(0, -50%)
   .icon-arrow-right
     stroke: #000000
     font-size: 27px
+
+.slider-kids
+
+  .slider-medium__title
+    font-size: 30px
+    line-height: 35px
+
+  .btn
+    margin-top: 60px
