@@ -27,11 +27,22 @@
     position: relative
     z-index: 2
 
+    +r(440)
+      height: 100vh
+      padding: 70px 20px 30px
+
   &__title
     font-size: 64px
     line-height: 75px
     letter-spacing: .02em
     color: #fff
+
+    +r(769)
+      font-size: 44px
+
+    +r(440)
+      font-size: 34px
+      line-height: 60px
 
   &__desc
     font-size: 24px
@@ -46,16 +57,28 @@
       margin: 9px 0
       line-height: 21px
 
+      +r(992)
+        display: flex
+        align-items: center
+
       &__icon
         display: inline-block
         width: 20px
         height: 20px
         margin-right: 20px
 
+        +r(992)
+          margin-right: 10px
+          width: 17px
+          height: 17px
+
       &__text
         font-size: 18px
         letter-spacing: .02em
         color: #fff
+
+        +r(992)
+          font-size: 14px
 
   .owl-prev
     position: absolute
@@ -67,6 +90,9 @@
     +r(1445)
       left: 5%
 
+    +r(992)
+      left: 0%
+
   .owl-next
     position: absolute
     top: 50%
@@ -77,8 +103,16 @@
     +r(1445)
       right: 5%
 
+    +r(992)
+      right: 0%
+
   .btn--yellow
     padding: 16px 50px
+
+    +r(992)
+      display: block
+      padding: 10px 30px
+      margin: auto
 
 .social
   position: absolute
@@ -132,14 +166,23 @@
   fill: transparent
   font-size: 50px
 
+  +r(992)
+    font-size: 35px
+
 .icon-arrow-right
   stroke: #ffffff
   fill: transparent
   font-size: 50px
 
+  +r(992)
+    font-size: 35px
+
 .section
   padding-top: 50px
   padding-bottom: 30px
+
+  +r(992)
+    padding-top: 35px
 
   &__desc
     font-size: 18px
@@ -148,8 +191,9 @@
     letter-spacing: 0.02em
     color: #000000
 
-    +r(740)
+    +r(992)
       text-align: right
+      font-size: 14px
 
     span
       border-bottom: 1px solid #000000
@@ -161,6 +205,9 @@
     .title-block
       margin-top: 50px
 
+      +r(992)
+        margin-top: 25px
+
   &.kids
     padding-bottom: 60px
 
@@ -169,7 +216,7 @@
   justify-content: space-between
   align-items: center
 
-  +r(520)
+  +r(440)
     flex-direction: column
 
 .title
@@ -185,6 +232,9 @@
   flex-direction: row
   align-items: center
 
+  +r(992)
+    padding-top: 15px
+
   &__icon
     margin-right: 10px
 
@@ -193,6 +243,10 @@
       height: 25px
       fill: #000000
 
+      +r(992)
+        width: 20px
+        height: 20px
+
   .dropdown
     .btn
       color: #000
@@ -200,6 +254,9 @@
       text-transform: none
       font-size: 18px
       line-height: 21px
+
+      +r(992)
+        margin: 0 10px
 
     &:last-child
       .btn
@@ -213,7 +270,7 @@
   &__calendar
     flex: 1
 
-    +r(520)
+    +r(440)
       display: none
 
   &__main
@@ -222,6 +279,9 @@
     flex-wrap: wrap
     flex: 6
     margin-top: 50px
+
+    +r(992)
+      margin-top: 25px
 
 .poster
   width: 210px
@@ -232,7 +292,7 @@
   transition: ease .3s
   overflow: hidden
 
-  +r(520)
+  +r(440)
     &::after
       content: ''
       position: absolute
@@ -242,7 +302,7 @@
       bottom: 0
       background: linear-gradient(270deg, #000000 0%, rgba(255, 255, 255, 0) 110%)
 
-  +r(520)
+  +r(440)
     width: 100%
 
   &:hover
@@ -254,7 +314,7 @@
 
   &__img
 
-    +r(520)
+    +r(440)
       width: 50%
 
   &__details
@@ -277,16 +337,19 @@
     transform: translateY(100%)
     transition: ease .3s
 
+    +r(992)
+      font-size: 12px
+
     .btn
       margin-top: 8px
       padding: 7px 30px
       font-size: 13px
       line-height: 15px
 
-      +r(520)
+      +r(440)
         background: #FFB100
 
-    +r(520)
+    +r(440)
       padding: 10px
       justify-content: center
       opacity: 1
@@ -302,8 +365,15 @@
     font-size: 24px
     line-height: 28px
 
+    +r(440)
+      font-size: 17px
+      line-height: 22px
+
   &__date-time
     margin: 10px 0
+
+    +r(992)
+      margin: 5px 0
 
   &__place
     margin-bottom: 10px
@@ -378,7 +448,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, .25)
     transition: ease .3s
 
-    +r(520)
+    +r(440)
       &::after
         content: ''
         position: absolute
@@ -390,7 +460,7 @@
 
     img
 
-      +r(520)
+      +r(440)
         width: 50% !important
 
     &:hover
@@ -424,7 +494,7 @@
       padding: 10px
       justify-content: center
 
-    +r(520)
+    +r(440)
       opacity: 1
       transform: none
       width: 50%
@@ -441,7 +511,7 @@
       line-height: 21px
       letter-spacing: 0.02em
 
-      +r(520)
+      +r(440)
         padding: 7px 30px
         font-size: 13px
         line-height: 15px
