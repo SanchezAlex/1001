@@ -1,8 +1,11 @@
 import $ from 'jquery';
 import 'owl.carousel';
 import 'bootstrap';
+import isTouchDevice from './lib/detectTouch';
 
 $(document).ready(function() {
+
+  isTouchDevice();
 
   // slider for intro block
   const optionsIntroSlider ={
@@ -30,9 +33,10 @@ $(document).ready(function() {
     smartSpeed: 1000,
     responsive: {
       0: {
-        items: 2
+        items: 2,
+        margin: 20
       },
-      600: {
+      560: {
         items: 3
       },
       1000: {
@@ -55,7 +59,7 @@ $(document).ready(function() {
         dotsEach: 1,
         items: 1
       },
-      600: {
+      560: {
         dotsEach: 1,
         items: 2
       },
@@ -79,9 +83,10 @@ $(document).ready(function() {
     smartSpeed: 1000,
     responsive: {
       0: {
-        items: 2
+        items: 2,
+        margin: 20
       },
-      600: {
+      560: {
         items: 3
       },
       1000: {
@@ -104,7 +109,7 @@ $(document).ready(function() {
         dotsEach: 1,
         items: 1
       },
-      600: {
+      560: {
         dotsEach: 1,
         items: 2
       },
@@ -128,9 +133,10 @@ $(document).ready(function() {
     smartSpeed: 1000,
     responsive: {
       0: {
-        items: 2
+        items: 2,
+        margin: 20
       },
-      600: {
+      560: {
         items: 3
       },
       1000: {
@@ -152,7 +158,7 @@ $(document).ready(function() {
         dotsEach: 1,
         items: 1
       },
-      600: {
+      560: {
         dotsEach: 1,
         items: 2
       },
