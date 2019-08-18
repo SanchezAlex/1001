@@ -1,4 +1,4 @@
-export default function is_touch_device() {
-    return 'ontouchstart' in window       
-        || navigator.maxTouchPoints;
-  };
+export default function isTouchDevice() {
+  return 'ontouchstart' in window       
+        || navigator.maxTouchPoints && document.body.classList.add('mobile');
+};

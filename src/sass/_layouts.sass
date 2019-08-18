@@ -28,8 +28,12 @@
     z-index: 2
 
     +r(440)
-      height: 100vh
+      height: calc(100vh - 100px)
       padding: 70px 20px 30px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
 
   &__title
     font-size: 64px
@@ -111,7 +115,7 @@
 
     +r(992)
       display: block
-      padding: 10px 30px
+      padding: 10px 20px
       margin: auto
 
 .social
@@ -183,6 +187,7 @@
 
   +r(992)
     padding-top: 35px
+    padding-bottom: 10px
 
   &__desc
     font-size: 18px
@@ -224,8 +229,10 @@
   line-height: 42px
   letter-spacing: 0.02em
 
-  +r(990)
+  +r(992)
     font-size: 24px
+    line-height: 34px
+    font-weight: 600
 
 .filter
   display: flex
@@ -275,7 +282,7 @@
 
   &__main
     display: flex
-    justify-content: flex-end
+    justify-content: center
     flex-wrap: wrap
     flex: 6
     margin-top: 50px
@@ -291,6 +298,9 @@
   position: relative
   transition: ease .3s
   overflow: hidden
+
+  +r(1024)
+    width: 172px
 
   +r(440)
     &::after
@@ -336,6 +346,10 @@
     opacity: 0
     transform: translateY(100%)
     transition: ease .3s
+
+    +r(1024)
+      opacity: 1
+      transform: translateY(0)
 
     +r(992)
       font-size: 12px
@@ -384,11 +398,17 @@
   margin-top: 50px
   text-align: center
 
+  +r(992)
+    margin-top: 25px
+
   .btn
     display: inline-flex
     align-items: center
     padding: 15px 50px
     text-transform: none
+
+    +r(992)
+      padding: 10px 30px
 
   .icon
     margin-left: 15px
@@ -396,15 +416,25 @@
     height: 25px
 
 .pre-slider
-  margin: 40px 0
+  width: 90%
+  margin: 40px auto
+
+  +r(992)
+    margin: 20px auto
 
   &__item
-    display: inline-block
+    display: inline-flex
+    align-items: center
     padding-bottom: 10px
     font-size: 18px
     line-height: 21px
-    border-bottom: 1px solid #C4C4C4
+    position: relative
     transition: ease .3s
+    text-align: center
+    border-bottom: 1px solid #C4C4C4
+
+    +r(992)
+      font-size: 16px
 
     a
       color: #000
@@ -414,8 +444,12 @@
       font-weight: bold
       border-color: #FFB100
 
+  .owl-stage
+    display: flex
+
   .owl-item
-    text-align: center
+    display: flex
+    justify-content: center
 
   .owl-nav
     display: flex
@@ -449,6 +483,7 @@
     transition: ease .3s
 
     +r(440)
+      margin: 10px
       &::after
         content: ''
         position: absolute
@@ -490,6 +525,10 @@
     transform: translateY(100%)
     transition: ease .3s
 
+    +r(1024)
+      opacity: 1
+      transform: translateY(0)
+
     +r(767)
       padding: 10px
       justify-content: center
@@ -522,16 +561,27 @@
     line-height: 42px
     letter-spacing: 0.02em
 
+    +r(440)
+      font-size: 24px
+      line-height: 30px
+
   &__desc
     font-size: 16px
     line-height: 19px
     letter-spacing: 0.02em
+
+    +r(440)
+      font-size: 14px
+      line-height: 16px
 
   &__date-time
     margin: 35px 0
     font-size: 14px
     line-height: 16px
     letter-spacing: 0.02em
+
+    +r(440)
+      margin: 10px 0
 
   &__place
     margin-bottom: 20px
@@ -571,9 +621,17 @@
   top: 45%
   left: -50px
   transform: translate(0, -50%)
+
+  +r(1024)
+    left: -5px
+    transform: translate(-50%, -50%)
+
   .icon-arrow-left
     stroke: #000000
     font-size: 54px
+
+    +r(1024)
+      font-size: 35px
 
 .slider-theaters-next,
 .slider-places-next,
@@ -582,9 +640,17 @@
   top: 45%
   right: -50px
   transform: translate(0, -50%)
+
+  +r(1024)
+    right: -5px
+    transform: translate(50%, -50%)
+
   .icon-arrow-right
     stroke: #000000
     font-size: 54px
+
+    +r(1024)
+      font-size: 35px
 
 .pre-slider-theaters-prev,
 .pre-slider-places-prev,
@@ -614,5 +680,12 @@
     font-size: 30px
     line-height: 35px
 
+    +r(440)
+      font-size: 20px
+      line-height: 25px
+
   .btn
     margin-top: 60px
+
+    +r(440)
+      margin-top: 30px
