@@ -8,7 +8,7 @@ $(document).ready(function() {
   isTouchDevice();
 
   // slider for intro block
-  const optionsIntroSlider ={
+  const optionsIntroSlider = {
     loop: true,
     margin: 0,
     nav: true,

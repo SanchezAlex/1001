@@ -189,6 +189,9 @@
       line-height: 16px
       height: 100%
 
+      &:nth-child(2)
+        margin-right: 0
+
       +r(992)
         margin: 0 7px
 
@@ -370,6 +373,9 @@
     +r(1025)
       padding: 20px 0
 
+    +r(992)
+      text-align: center
+
   &__item
     display: flex
     flex-direction: column
@@ -378,10 +384,10 @@
     +r(1025)
       align-items: center
 
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4)
-        display: none
+      //&:nth-child(2),
+      //&:nth-child(3),
+      //&:nth-child(4)
+        //display: none
     
   .copyright
     margin-top: 15px
@@ -390,7 +396,7 @@
     line-height: 19px
 
     +r(1025)
-      display: none
+      //display: none
     
     a
       display: inline-block
