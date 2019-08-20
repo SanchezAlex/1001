@@ -292,7 +292,7 @@
 
 .poster
   width: 210px
-  margin: 8px 12px
+  margin: 16px 0 0 27px
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25)
   line-height: 0
   position: relative
@@ -379,6 +379,10 @@
     font-size: 24px
     line-height: 28px
 
+    +r(1025)
+      font-size: 20px
+      line-height: 22px
+
     +r(440)
       font-size: 17px
       line-height: 22px
@@ -416,7 +420,7 @@
     height: 25px
 
 .pre-slider
-  width: 90%
+  width: 94%
   margin: 40px auto
 
   +r(992)
@@ -431,7 +435,6 @@
     position: relative
     transition: ease .3s
     text-align: center
-    border-bottom: 1px solid #C4C4C4
 
     +r(992)
       font-size: 16px
@@ -442,7 +445,6 @@
 
     &:hover
       font-weight: bold
-      border-color: #FFB100
 
   .owl-stage
     display: flex
@@ -450,6 +452,11 @@
   .owl-item
     display: flex
     justify-content: center
+    border-bottom: 1px solid #C4C4C4
+    transition: .3s ease
+
+    &:hover
+      border-color: #FFB100
 
   .owl-nav
     display: flex
@@ -515,7 +522,7 @@
     flex-direction: column
     justify-content: flex-end
     align-items: center
-    padding: 15px 15px 75px 15px
+    padding: 30px 15px 50px
     font-size: 14px
     line-height: 16px
     color: #000
@@ -557,9 +564,18 @@
         background: #FFB100
 
   &__title
-    font-size: 36px
-    line-height: 42px
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    overflow: hidden
+    margin-bottom: 10px
+    font-size: 35px
+    line-height: 40px
     letter-spacing: 0.02em
+
+    +r(1025)
+      font-size: 30px
+      line-height: 32px
 
     +r(440)
       font-size: 24px
