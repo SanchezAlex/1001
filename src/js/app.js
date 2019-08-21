@@ -22,6 +22,20 @@ $(document).ready(function() {
 
   $('.slider').owlCarousel(optionsIntroSlider);
 
+  // calendar slider
+  const optionsCalendarSlider = {
+    loop: true,
+    margin: 30,
+    nav: true,
+    dots: false,
+    items: 4,
+    autoplay: false,
+    navText: [$('.calendar-prev'), $('.calendar-next')],
+    smartSpeed: 500
+  };
+
+  $('.posters__calendar').owlCarousel(optionsCalendarSlider);
+
   // pre-slider for theaters block
   const optionsPreTheaters = {
     loop: true,
