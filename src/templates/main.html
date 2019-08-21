@@ -110,8 +110,15 @@
             </div>
         </div>
         <div class="posters__wrap">
-            <div class="posters__calendar">
-
+            <div class="posters__calendar owl-carousel">
+                {% for item in data.calendar %}
+                <a href="" class="posters__calendar__item">
+                    <span class="posters__calendar__day">{{ item.day }}</span>
+                    <span class="posters__calendar__month">{{ item.month }}</span>
+                </a>
+                {% endfor %}
+                <div class="calendar-prev">{{mixins.icon('arrow-left')}}</div>
+                <div class="calendar-next">{{mixins.icon('arrow-right')}}</div>
             </div>
             <div class="posters__main">
                 {% for poster in data.posters %}
