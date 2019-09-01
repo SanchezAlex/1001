@@ -3,3 +3,5 @@ ProjectTitle: 1001
 PageList:
 - file: main.html
   ready: 70
+- file: book-tickets.html
+  ready: 10
