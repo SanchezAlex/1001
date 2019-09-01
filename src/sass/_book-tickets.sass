@@ -1,0 +1,375 @@
+// TODO: body height
+html, body, .out
+	height: 100%
+
+$header-background: #403866
+$white: #FFFFFF
+$black: #000000
+
+.out
+	display: flex
+	flex-direction: column
+	background-color: #E5E5E5
+
+header.main-header
+	display: flex
+	flex-direction: row
+	align-items: center
+	height: 90px
+	position: relative
+	z-index: 2
+	justify-content: space-between
+	background-color: $header-background
+
+header.main-header:before
+	content: ''
+	position: absolute
+	left: -5%
+	top: 0
+	width: 110%
+	height: 270%
+	border-radius: 0 0 60% 60%
+	background-color: $header-background
+
+.main-header-content
+	color: $white
+	z-index: 2
+	width: 100%
+	//height: 100%
+	display: flex
+	flex-direction: row
+	align-items: flex-end
+	justify-content: space-between
+	height: fit-content
+	padding: 32px 64px 32px 32px
+
+.main-header-content-mobile
+	display: none
+
+.info-wrapper
+	display: flex
+	align-items: flex-end
+	justify-content: space-between
+
+.main-header-logo
+	display: flex
+	height: 30px
+	width: 140px
+
+.event-name, .event-date, .event-time, .event-place
+	padding-left: 52px
+
+.content
+	position: relative
+	display: flex
+	margin-bottom: 32px
+	height: 100%
+	align-items: center
+	flex-direction: row
+	justify-content: center
+	color: $white
+	z-index: 2
+	padding: 0 32px
+
+.content .tickets-select
+	display: flex
+	height: 100%
+	width: 100%
+	background-color: $white
+	border-radius: 20px
+	margin-right: 16px
+	color: $black
+	position: relative
+
+	.control-button
+		width: 32px
+		height: 32px
+		left: 16px
+		background: #F6F6F4
+		border-radius: 4px
+		position: absolute
+		-webkit-box-shadow: 0 1px 6px #666666
+		-moz-box-shadow: 0 1px 6px #666666
+		box-shadow: 0 1px 6px #666666
+		&.plus
+			top: 60px
+		&.minus
+			top: 108px
+		&.focus
+			top: 156px
+
+	.prices-button
+		display: none
+	
+	.tickets-select-header
+		display: flex
+		font-family: Roboto, sans-serif
+		font-style: normal
+		font-weight: 500
+		font-size: 16px
+		height: fit-content
+		margin-top: 32px
+		justify-content: center
+		line-height: 19px
+		text-align: center
+		color: $black
+		opacity: 0.8
+		width: 100%
+
+	.tickets-select-header-mobile
+		display: none
+
+.content .tickets-list-wrapper
+	display: flex
+	flex-direction: column
+	height: 100%
+	width: 320px
+	background-color: $white
+	color: $black
+	border-radius: 20px
+
+.content .tickets-list-wrapper-mobile
+	display: none
+
+.content .tickets-list
+	flex: 1 1 auto
+
+.content .tickets-list-footer
+	display: flex
+	flex-direction: column
+	padding: 0 32px 32px 32px
+
+	.footer-item
+		display: flex
+		justify-content: space-between
+		font-family: Roboto, sans-serif
+		font-size: 14px
+		letter-spacing: 0.02em
+		line-height: 16px
+		padding-bottom: 8px
+		&.last-item
+			padding-bottom: 16px
+		.footer-item-text
+			opacity: 0.4
+			font-weight: 500
+			&.text-bold
+				opacity: 1
+
+	.accept-button
+		background-color: $header-background
+		border-radius: 8px
+		color: $white
+		height: 64px
+		width: 256px
+		font-family: Roboto, sans-serif
+		font-weight: 500
+		font-size: 16px
+
+
+.tickets-list-header
+	font-family: Roboto, sans-serif
+	font-size: 14px
+	line-height: 16px
+	text-align: center
+	display: flex
+	width: 100%
+	height: fit-content
+	align-items: center
+	justify-content: center
+	padding-top: 32px
+	opacity: 0.8
+
+.icon-24
+	height: 24px
+	width: 24px
+
+.icon-16
+	height: 16px
+	width: 16px
+
+.icon-12
+	width: 12px
+
+.prices-rectangle
+	height: 6px
+	width: 12px
+
+// responsive
+body
+	+r(768)
+		.out
+			background-color: $header-background
+
+		header.main-header
+			height: unset
+
+		header.main-header:before
+			content: unset
+			position: unset
+			left: unset
+			top: unset
+			width: unset
+			height: unset
+			border-radius: unset
+			background-color: unset
+
+		.main-header-logo
+			height: 20px
+			width: 96px
+
+		.main-header-content
+			display: none
+
+		.event-name, .event-date, .event-time, .event-place
+			padding-left: unset
+
+		.main-header-content-mobile
+			display: flex
+			flex-direction: column
+			width: 100%
+
+			.logo-block
+				align-items: flex-end
+				display: flex
+				width: 100%
+				justify-content: space-between
+				//margin: 12px 16px 28px 16px
+				padding: 12px 16px 28px 16px
+
+			.main-header-timer-mobile
+				font-family: Roboto, sans-serif
+				font-style: normal
+				font-weight: 500
+				font-size: 16px
+				line-height: 19px
+				color: $white
+
+			.event-name
+				font-family: Roboto Condensed, sans-serif
+				font-style: normal
+				font-weight: bold
+				font-size: 22px
+				line-height: 26px
+				margin-bottom: 10px
+				opacity: 0.8
+				padding-left: 21px
+				color: $white
+
+			.event-date, .event-time, .event-place
+				font-family: Roboto, sans-serif
+				font-style: normal
+				font-weight: normal
+				font-size: 12px
+				padding-left: 16px
+				margin-bottom: 6px
+				line-height: 14px
+				opacity: 0.6
+				color: $white
+				display: flex
+				align-items: center
+				span.event-text
+					margin-left: 5px
+					padding-top: 7px
+
+			.event-place
+				padding-bottom: 30px
+				span.event-text
+					padding-top: 4px
+
+			.event-time
+				margin-bottom: 4px
+				span.event-text
+					padding-top: 2px
+
+		.content
+			margin: 0
+			flex-direction: column
+			padding: 0
+
+		.content .tickets-select
+			flex: 1
+			margin-right: 0
+			margin-bottom: -30px
+			
+			.tickets-select-header
+				display: none
+				opacity: 0.8
+			
+			.tickets-select-header-mobile
+				display: flex
+				height: fit-content
+				width: 100%
+				padding-left: 16px
+				padding-top: 19px
+
+			.control-button
+				width: 32px
+				height: 32px
+				left: 16px
+				background: #F6F6F4
+				border-radius: 4px
+				position: absolute
+				-webkit-box-shadow: 0 1px 6px #666666
+				-moz-box-shadow: 0 1px 6px #666666
+				box-shadow: 0 1px 6px #666666
+				&.plus
+					top: 60px
+				&.minus
+					top: 108px
+				&.focus
+					top: 156px
+			
+			.prices-button
+				font-family: Roboto, sans-serif
+				display: flex
+				flex-direction: row
+				align-items: center
+				justify-content: center
+				position: absolute
+				height: 32px
+				width: 80px
+				background: #F6F6F4
+				border-radius: 4px
+				top: 60px
+				right: 16px
+				font-style: normal
+				font-weight: 500
+				font-size: 12px
+				line-height: 20px
+				-webkit-box-shadow: 0 1px 6px #666666
+				-moz-box-shadow: 0 1px 6px #666666
+				box-shadow: 0 1px 6px #666666
+				img
+					margin-right: 6px
+
+		.content .tickets-list-wrapper
+			display: none
+
+		.content .tickets-list-wrapper-mobile
+			background-color: $header-background
+			border-top-left-radius: 20px
+			border-top-right-radius: 20px
+			display: flex
+			justify-content: space-between
+			padding: 16px 16px 16px 20px
+			height: 72px
+			position: relative
+			width: 100%
+
+			.total-amount
+				align-items: center
+				display: flex
+				flex-direction: row
+				img
+					margin-right: 12px
+
+			.accept-button-m
+				font-family: Roboto, sans-serif
+				font-size: 14px
+				font-weight: 500
+				line-height: 20px
+				width: 144px
+				height: 40px
+				background: #534c75
+				color: $white
+				border-radius: 4px
