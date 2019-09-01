@@ -84,8 +84,8 @@
                             Стили
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownStyles">
-                            <button class="dropdown-item" type="button">any</button>
-                            <button class="dropdown-item" type="button">any</button>
+                            <button class="dropdown-item" type="button">Концерт</button>
+                            <button class="dropdown-item" type="button">Фестиваль</button>
                         </div>
                     </div>
                     <div class="dropdown">
@@ -93,8 +93,8 @@
                             Залы
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownHalls">
-                            <button class="dropdown-item" type="button">any</button>
-                            <button class="dropdown-item" type="button">any</button>
+                            <button class="dropdown-item" type="button">Зал 1</button>
+                            <button class="dropdown-item" type="button">Зал 2</button>
                         </div>
                     </div>
                     <div class="dropdown">
@@ -102,8 +102,8 @@
                             Типы
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownTypes">
-                            <button class="dropdown-item" type="button">any</button>
-                            <button class="dropdown-item" type="button">any</button>
+                            <button class="dropdown-item" type="button">Тип 1</button>
+                            <button class="dropdown-item" type="button">Тип 2</button>
                         </div>
                     </div>
                 </div>
@@ -115,12 +115,20 @@
                 <a href="" class="posters__calendar__item">
                     <span class="posters__calendar__day">{{ item.day }}</span>
                     <span class="posters__calendar__month">{{ item.month }}</span>
+                    <span class="posters__calendar__divider"></span>
                 </a>
                 {% endfor %}
                 <div class="calendar-prev">{{mixins.icon('arrow-left')}}</div>
                 <div class="calendar-next">{{mixins.icon('arrow-right')}}</div>
             </div>
             <div class="posters__main">
+                <div class="notification">
+                    <span class="notification__icon">
+                        <!--{{mixins.icon('info')}}-->
+                        <img src="img/info.png" alt="info icon">
+                    </span>
+                    <p class="notification__text">Увы, в ближайшее время событий, которые соответствовали бы вашим пожеланиям проходить не будет, но вы можете выбрать что-то из рекомендуемых</p>
+                </div>
                 {% for poster in data.posters %}
                 <a href="" class="poster">
                     <img src={{poster.img}} class="poster__img" alt="poster image">

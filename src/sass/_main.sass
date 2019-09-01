@@ -69,10 +69,16 @@
 
     +r(992)
       padding-top: 5px
-      border-top: 1px solid #ffffff
+      border-top: none
 
   .nav-item
-    padding-left: 30px
+    padding-left: 20px
+
+    +r(1280)
+      padding-left: 15px
+
+    +r(1190)
+      padding-left: 10px
 
   .logo
     display: flex
@@ -134,14 +140,15 @@
     +r(992)
       order: 3
       flex: 3
-      position: absolute
+      position: fixed
+      height: 100vh
+      width: 100vw
       left: 0
-      right: 6%
-      height: auto
       z-index: 3
       top: 0
       background: #1c222a
-      padding-top: 80px
+      padding-top: 50px
+      overflow-y: auto
 
   &__nav-link
     font-size: 14px
@@ -150,8 +157,13 @@
     color: #FFFFFF !important
     text-transform: uppercase
 
+    +r(1190)
+      font-size: 12px
+
     +r(992)
-      line-height: 16px
+      line-height: 14px
+      font-weight: 700
+      text-transform: initial
 
   &__action
     display: flex
@@ -216,10 +228,6 @@
         +r(992)
           display: none
 
-      &:hover
-        .more-items
-          display: flex
-
   .more-items
     display: none
     position: absolute
@@ -230,6 +238,9 @@
     background: #1c222a
     height: 42px
     padding-left: 15px
+
+    &.active
+      display: flex
 
     .nav-item
       background: #1c222a
@@ -251,14 +262,11 @@
 .nav-item-more
   display: flex
   align-items: center
-
-  &:hover
-
-    .more-items
-      display: flex
+  padding-left: 15px
 
   +r(992)
     padding-bottom: 5px
+    padding-left: 0
 
   span
     color: #ffffff
@@ -266,15 +274,10 @@
     +r(992)
       display: none
 
-.nav-item-pre-header
-
-  +r(992)
-    border-top: 1px solid #ffffff
-
 .pre-header
   display: flex
   padding: 10px 0
-  margin-left: 45px
+  margin-left: 30px
   left: 0
   position: absolute
   top: 100%
@@ -303,7 +306,7 @@
 
     +r(992)
       margin: 3px 0
-      padding-left: 30px
+      padding-left: 10px
 
   &__link
     font-size: 12px
@@ -313,10 +316,11 @@
     color: #000
 
     +r(992)
-      font-size: 14px
-      line-height: 16px
+      font-size: 12px
+      line-height: 14px
       letter-spacing: 0.02em
       color: #FFFFFF
+      text-transform: initial
 
 .phone
   display: flex
@@ -333,8 +337,7 @@
     padding-top: 10px
     margin-bottom: 20px
     position: initial
-    padding-left: 30px
-    border-top: 1px solid #ffffff
+    padding-left: 10px
     transform: initial
     line-height: 16px
     color: #fff
@@ -360,6 +363,85 @@
       border: none !important
       box-shadow: none !important
 
+  .dropdown-item
+    padding: 5px
+    margin: 0
+    line-height: 19px
+
+  .dropdown-menu
+    min-width: 100%
+
+.search-form .form-group input.form-control
+  &::-webkit-input-placeholder, &::-moz-placeholder
+    display: none
+
+.search-form
+  display: block
+  width: 25px
+  height: 25px
+  position: relative
+
+.form-group
+  width: 0
+  backface-visibility: hidden
+  input.form-control
+    position: absolute
+    top: 0
+    right: -5px
+    outline: none
+    width: 0
+    margin: 0
+    z-index: 10
+    background: transparent
+    border: none
+    transform: translateY(-25%)
+    transition: .5s ease
+
+  input[type="text"].form-control
+    -webkit-appearence: none
+    -webkit-border-radius: 0
+
+.form-control-submit, .search-label
+  position: absolute
+  right: 0
+  top: 0
+  padding: 0
+  margin: 0
+  text-align: center
+  cursor: pointer
+
+.form-control-submit
+  background: #fff
+  opacity: 0
+  color: transparent
+  border: none
+  outline: none
+  z-index: -1
+
+.search-label
+  z-index: 2
+
+.form-group.sb-search-open, .no-js .sb-search-open
+  .form-control
+    width: 450px
+    height: 43px
+    background: #fff
+    border: 1px solid #ddd
+
+    +r(440)
+      width: 270px
+
+    &.error
+      border: 1px solid #cc1111
+
+.form-group.sb-search-open .search-label, .no-js .sb-search .search-label
+  z-index: 11
+
+.form-group.sb-search-open .form-control-submit, .no-js .form-control .form-control-submit
+  z-index: 90
+  width: 25px
+  height: 100%
+
 // header ends
 
 // footer start
@@ -369,6 +451,9 @@
 
   &__wrap
     padding: 100px 0
+
+    +r(1280)
+      padding: 60px 0
 
     +r(1025)
       padding: 20px 0
@@ -397,7 +482,11 @@
 
     +r(1025)
       //display: none
-    
+
+    +r(1280)
+      font-size: 14px
+      line-height: 16px
+
     a
       display: inline-block
       margin-top: 5px
@@ -419,5 +508,12 @@
     letter-spacing: 0.02em
     color: #FFFFFF
 
+    +r(1280)
+      margin: 10px 0
+      font-size: 14px
+      line-height: 16px
+
+    +r(992)
+      margin: 5px 0
 
 // footer ends

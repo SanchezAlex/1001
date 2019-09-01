@@ -1,12 +1,12 @@
 // TODO: body height
-html, body, .out
+html, body, .tickets
 	height: 100%
 
 $header-background: #403866
 $white: #FFFFFF
 $black: #000000
 
-.out
+.tickets
 	display: flex
 	flex-direction: column
 	background-color: #E5E5E5
@@ -62,6 +62,7 @@ header.main-header:before
 .content
 	position: relative
 	display: flex
+	flex: 1
 	margin-bottom: 32px
 	height: 100%
 	align-items: center
@@ -197,7 +198,7 @@ header.main-header:before
 // responsive
 body
 	+r(768)
-		.out
+		.tickets
 			background-color: $header-background
 
 		header.main-header

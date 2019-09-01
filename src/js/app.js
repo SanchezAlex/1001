@@ -28,30 +28,28 @@ $(document).ready(function() {
     margin: 30,
     nav: true,
     dots: false,
-    items: 4,
+    items: 3,
     autoplay: false,
     navText: [$('.calendar-prev'), $('.calendar-next')],
-    smartSpeed: 500
+    smartSpeed: 500,
   };
 
   $('.posters__calendar').owlCarousel(optionsCalendarSlider);
 
   // pre-slider for theaters block
   const optionsPreTheaters = {
-    loop: true,
     margin: 40,
     nav: true,
     dots: false,
-    center: true,
     navText: [$('.pre-slider-theaters-prev'), $('.pre-slider-theaters-next')],
     smartSpeed: 1000,
     responsive: {
       0: {
-        items: 2,
+        items: 1,
         margin: 20
       },
       560: {
-        items: 3
+        items: 2
       },
       1000: {
         items: 3
@@ -63,7 +61,6 @@ $(document).ready(function() {
 
   // slider for theaters block
   const optionsTheatersSlider = {
-    loop: true,
     nav: true,
     dots: true,
     navText: [$('.slider-theaters-prev'), $('.slider-theaters-next')],
@@ -88,20 +85,18 @@ $(document).ready(function() {
 
   // pre-slider for places block
   const optionsPrePlaces = {
-    loop: true,
     margin: 40,
     nav: true,
     dots: false,
-    center: true,
     navText: [$('.pre-slider-places-prev'), $('.pre-slider-places-next')],
     smartSpeed: 1000,
     responsive: {
       0: {
-        items: 2,
+        items: 1,
         margin: 20
       },
       560: {
-        items: 3
+        items: 2
       },
       1000: {
         items: 3
@@ -113,7 +108,6 @@ $(document).ready(function() {
 
   // slider for places block
   const optionsPlacesSlider = {
-    loop: true,
     nav: true,
     dots: true,
     navText: [$('.slider-places-prev'), $('.slider-places-next')],
@@ -138,20 +132,18 @@ $(document).ready(function() {
 
   // pre-slider for kids places block
   const optionsPreKids = {
-    loop: true,
     margin: 40,
     nav: true,
     dots: false,
-    center: true,
     navText: [$('.pre-slider-kids-prev'), $('.pre-slider-kids-next')],
     smartSpeed: 1000,
     responsive: {
       0: {
-        items: 2,
+        items: 1,
         margin: 20
       },
       560: {
-        items: 3
+        items: 2
       },
       1000: {
         items: 3
@@ -163,7 +155,6 @@ $(document).ready(function() {
 
   // slider for kids places block
   const optionsKidsSlider = {
-    loop: true,
     nav: true,
     navText: [$('.slider-kids-prev'), $('.slider-kids-next')],
     smartSpeed: 1000,
@@ -184,5 +175,29 @@ $(document).ready(function() {
   };
 
   $('.slider-kids').owlCarousel(optionsKidsSlider);
+
+  // search button
+  $('#search').on('click',(function(e) {
+    $('.form-group').addClass('sb-search-open');
+    e.stopPropagation();
+  }));
+  $(document).on('click', function(e) {
+    if ($(e.target).is('#search') === false && $('.form-control').val().length === 0) {
+      $('.form-group').removeClass('sb-search-open');
+      $('.form-control').addClass('error');
+    }
+  });
+  $('.form-control-submit').click(function(e) {
+    $('.form-control').each(function() {
+      if ($('.form-control').val().length === 0) {
+        e.preventDefault();
+        $(this).addClass('error');
+      }
+    });
+  });
+
+  $('.nav-item-more').on('click', function() {
+    $('.nav-item-more .more-items').toggleClass('active');
+  });
 
 });
