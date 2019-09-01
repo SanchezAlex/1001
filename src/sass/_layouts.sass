@@ -231,8 +231,7 @@
 
   +r(992)
     font-size: 24px
-    line-height: 34px
-    font-weight: 600
+    line-height: 28px
 
 .filter
   display: flex
@@ -273,6 +272,8 @@
 
   &__wrap
     display: flex
+    +r(440)
+      margin: 0 -15px
 
   &__calendar
     flex: 1
@@ -281,8 +282,8 @@
     position: relative
     text-align: center
 
-    +r(440)
-      display: none
+    +r(992)
+      display: none !important
 
     .owl-stage-outer
       transform: rotate(90deg)
@@ -298,6 +299,12 @@
       &:hover
         text-decoration: none
 
+        .posters__calendar__month
+          opacity: 1
+
+        .posters__calendar__day
+          font-size: 48px
+
     &__day
       display: inline-block
       font-size: 24px
@@ -305,7 +312,14 @@
       color: #000
 
     &__month
-      display: none
+      display: block
+      padding-top: 5px
+      font-size: 18px
+      line-height: 21px
+      color: #000
+      text-transform: lowercase
+      transition: .3s ease
+      opacity: 0
 
   &__main
     display: flex
@@ -320,7 +334,7 @@
 .calendar-next,
 .calendar-prev
   position: absolute
-  left: 35%
+  left: 32%
   padding: 5px
   transform: rotate(90deg)
   background: #fff
@@ -333,6 +347,39 @@
 
 .calendar-next
   bottom: -7px
+
+.notification
+  padding: 50px 80px
+  margin-top: 10px
+  margin-bottom: 50px
+  margin-left: 5px
+  border: 1px solid #FFB100
+  position: relative
+
+  +r(992)
+    padding: 30px 40px
+    margin-bottom: 30px
+
+  +r(440)
+    margin-left: 20px
+    margin-right: 15px
+
+  &__text
+    font-size: 18px
+    line-height: 21px
+    color: #000
+    text-align: center
+
+  &__icon
+    display: inline-block
+    width: 57px
+    height: 57px
+    position: absolute
+    left: 0
+    top: 0
+    transform: translate(-50%, -50%)
+    background: #fff
+    padding: 10px
 
 .poster
   width: 210px
@@ -358,6 +405,7 @@
 
   +r(440)
     width: 100%
+    margin-left: 0
 
   &:hover
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7)
@@ -410,6 +458,7 @@
     +r(440)
       padding: 10px
       justify-content: center
+      align-items: start
       opacity: 1
       transform: none
       width: 50%
@@ -430,15 +479,22 @@
     +r(440)
       font-size: 17px
       line-height: 22px
+      text-align: left
 
   &__date-time
     margin: 10px 0
 
     +r(992)
       margin: 5px 0
+      
+    +r(440)
+      text-align: left
 
   &__place
     margin-bottom: 10px
+    
+    +r(440)
+      text-align: left
 
 .more
   display: block
@@ -526,7 +582,7 @@
 
   &__item
     display: block
-    margin: 20px
+    margin: 20px 20px 30px
     position: relative
     overflow: hidden
     line-height: 0
@@ -593,6 +649,8 @@
       left: auto
       color: #ffffff
       z-index: 2
+      align-items: start
+      text-align: left
 
     .btn
       margin-top: 8px
@@ -622,8 +680,9 @@
       line-height: 32px
 
     +r(440)
-      font-size: 24px
-      line-height: 30px
+      font-size: 17px
+      line-height: 22px
+      margin-bottom: 5px
 
   &__desc
     font-size: 16px
@@ -641,7 +700,7 @@
     letter-spacing: 0.02em
 
     +r(440)
-      margin: 10px 0
+      margin: 7px 0
 
   &__place
     margin-bottom: 20px
@@ -723,6 +782,9 @@
     stroke: #000000
     font-size: 27px
 
+  +r(440)
+    left: -20px
+
 .pre-slider-theaters-next,
 .pre-slider-places-next,
 .pre-slider-kids-next
@@ -733,6 +795,9 @@
   .icon-arrow-right
     stroke: #000000
     font-size: 27px
+
+  +r(440)
+    right: -20px
 
 .slider-kids
 

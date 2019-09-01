@@ -100,11 +100,19 @@
                   </a>
                 </div>
                 <div class="header__action header__action--search">
-                  <button class="header__action__btn">
-                    <svg class="icon icon-search">
-                      <use xlink:href="img/sprite.svg#icon-search"></use>
-                    </svg>
-                  </button>
+                  <form class="search-form" role="search">
+                    <div class="form-group" id="search">
+                      <input type="text" class="form-control" placeholder="Название места или события">
+                      <button type="submit" class="form-control-submit">Submit</button>
+                      <span class="search-label">
+                        <i class="header__action__btn">
+                          <svg class="icon icon-search">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                          </svg>
+                        </i>
+                      </span>
+                    </div>
+                  </form>
                   <button class="header__action__btn">
                     <svg class="icon icon-calendar">
                       <use xlink:href="img/sprite.svg#icon-calendar"></use>
@@ -295,22 +303,22 @@
                 <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownStyles" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Стили </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownStyles">
-                    <button class="dropdown-item" type="button">any</button>
-                    <button class="dropdown-item" type="button">any</button>
+                    <button class="dropdown-item" type="button">Концерт</button>
+                    <button class="dropdown-item" type="button">Фестиваль</button>
                   </div>
                 </div>
                 <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownHalls" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Залы </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownHalls">
-                    <button class="dropdown-item" type="button">any</button>
-                    <button class="dropdown-item" type="button">any</button>
+                    <button class="dropdown-item" type="button">Зал 1</button>
+                    <button class="dropdown-item" type="button">Зал 2</button>
                   </div>
                 </div>
                 <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTypes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Типы </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownTypes">
-                    <button class="dropdown-item" type="button">any</button>
-                    <button class="dropdown-item" type="button">any</button>
+                    <button class="dropdown-item" type="button">Тип 1</button>
+                    <button class="dropdown-item" type="button">Тип 2</button>
                   </div>
                 </div>
               </div>
@@ -321,126 +329,157 @@
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">1</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">2</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">3</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">4</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">5</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">6</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">7</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">8</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">9</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">10</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">11</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">12</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">13</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">14</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">15</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">16</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">17</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">18</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">19</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">20</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">21</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">22</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">23</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">24</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">25</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">26</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">27</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">28</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">29</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">30</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <a href="" class="posters__calendar__item">
                 <span class="posters__calendar__day">31</span>
                 <span class="posters__calendar__month">July</span>
+                <span class="posters__calendar__divider"></span>
               </a>
               <div class="calendar-prev">
                 <svg class="icon icon-arrow-left">
@@ -454,6 +493,15 @@
               </div>
             </div>
             <div class="posters__main">
+              <div class="notification">
+                <span class="notification__icon">
+                  <!--
+<svg class="icon icon-info"><use xlink:href="img/sprite.svg#icon-info"></use></svg>
+-->
+                  <img src="img/info.png" alt="info icon">
+                </span>
+                <p class="notification__text">Увы, в ближайшее время событий, которые соответствовали бы вашим пожеланиям проходить не будет, но вы можете выбрать что-то из рекомендуемых</p>
+              </div>
               <a href="" class="poster">
                 <img src=img/posters/poster-1.jpg class="poster__img" alt="poster image">
                 <div class="poster__details">
