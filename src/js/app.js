@@ -184,14 +184,18 @@ $(document).ready(function() {
   $(document).on('click', function(e) {
     if ($(e.target).is('#search') === false && $('.form-control').val().length === 0) {
       $('.form-group').removeClass('sb-search-open');
-      $('.form-control').addClass('error');
+      // $('.form-control').addClass('error');
     }
+  });
+  $('.search-form-close').on('click', function(e) {
+    $('#search').removeClass('sb-search-open');
+    e.stopPropagation();
   });
   $('.form-control-submit').click(function(e) {
     $('.form-control').each(function() {
       if ($('.form-control').val().length === 0) {
         e.preventDefault();
-        $(this).addClass('error');
+        // $(this).addClass('error');
       }
     });
   });

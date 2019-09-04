@@ -305,6 +305,9 @@
         .posters__calendar__day
           font-size: 48px
 
+        .posters__calendar__divider
+          opacity: 1
+
     &__day
       display: inline-block
       font-size: 24px
@@ -321,6 +324,31 @@
       transition: .3s ease
       opacity: 0
 
+    &__divider
+      display: block
+      height: 2px
+      width: 100%
+      background: #000
+      position: relative
+      opacity: 0
+      transition: .3s ease
+
+      &::before,
+      &::after
+        content: ''
+        position: absolute
+        background: #000
+        top: 0
+        bottom: 0
+        height: 2px
+
+      &::before
+        right: 0
+        width: 100px
+      &::after
+        left: 0
+        width: 50px
+
   &__main
     display: flex
     justify-content: center
@@ -334,8 +362,6 @@
 .calendar-next,
 .calendar-prev
   position: absolute
-  left: 32%
-  padding: 5px
   transform: rotate(90deg)
   background: #fff
   .icon
@@ -343,16 +369,20 @@
     font-size: 30px
 
 .calendar-prev
-  top: -7px
+  top: 7px
+  left: 22%
+  padding: 5px 40px 5px 5px
 
 .calendar-next
-  bottom: -7px
+  bottom: -12px
+  left: 32%
+  padding: 4px
 
 .notification
   padding: 50px 80px
   margin-top: 10px
   margin-bottom: 50px
-  margin-left: 5px
+  margin-left: 27px
   border: 1px solid #FFB100
   position: relative
 
@@ -447,6 +477,9 @@
       font-size: 12px
 
     .btn
+      display: inline-block
+      max-width: 115px
+      width: 100%
       margin-top: 8px
       padding: 7px 30px
       font-size: 13px
@@ -653,6 +686,9 @@
       text-align: left
 
     .btn
+      display: inline-block
+      max-width: 155px
+      width: 100%
       margin-top: 8px
       padding: 15px 40px
       font-size: 18px

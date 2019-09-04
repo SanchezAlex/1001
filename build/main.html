@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
     <link rel="stylesheet" media="all" href="css/app.css" />
@@ -102,7 +103,10 @@
                 <div class="header__action header__action--search">
                   <form class="search-form" role="search">
                     <div class="form-group" id="search">
-                      <input type="text" class="form-control" placeholder="Название места или события">
+                      <div class="form-control">
+                        <span class="search-form-close">X</span>
+                        <input type="text" placeholder="Название места или события">
+                      </div>
                       <button type="submit" class="form-control-submit">Submit</button>
                       <span class="search-label">
                         <i class="header__action__btn">
