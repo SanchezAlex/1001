@@ -74,6 +74,7 @@ header.main-header:before
 
 .content .tickets-select
 	display: flex
+	flex-direction: column
 	height: 100%
 	width: 100%
 	background-color: $white
@@ -119,6 +120,74 @@ header.main-header:before
 
 	.tickets-select-header-mobile
 		display: none
+
+	.lp-header
+		padding-top: 36px
+		font-weight: bold
+		font-size: 22px
+		line-height: 20px
+		display: flex
+		align-items: center
+		color: $black
+		opacity: 0.6
+		justify-content: center
+
+		&.lp-2
+			font-size: 24px
+			line-height: 28px
+
+		&.lp-3
+			color: #BD4545
+
+	.lp-image-wrapper
+		margin-top: 12px
+		margin-bottom: 26px
+		display: flex
+		justify-content: center
+		img
+			width: 368px
+			&.lp-2
+				width: 515px
+			&.lp-3
+				width: 407px
+
+	.lp-order-info
+		font-size: 14px
+		line-height: 20px
+		display: flex
+		align-items: center
+		letter-spacing: 0.02em
+		opacity: 0.6
+		justify-content: center
+		text-align: center
+		padding: 0 20px
+		&.m-b-small
+			margin-bottom: 4px
+
+	.lp-gratitude
+		font-weight: bold
+		font-size: 16px
+		line-height: 19px
+		display: flex
+		align-items: center
+		opacity: 0.6
+		margin-top: 26px
+		justify-content: center
+
+	.lp-button-w
+		display: flex
+		justify-content: center
+		margin-top: 32px
+
+	.lp-button
+		background-color: #403866
+		width: 288px
+		height: 48px
+		border-radius: 6px
+		color: white
+		font-weight: 500
+		font-size: 14px
+		line-height: 16px
 
 .content .tickets-list-wrapper
 	display: flex
@@ -195,6 +264,111 @@ header.main-header:before
 	height: 6px
 	width: 12px
 
+// custom radio
+[type="radio"]:checked, [type="radio"]:not(:checked)
+	position: absolute
+	left: -9999px
+
+[type="radio"]:checked + label, [type="radio"]:not(:checked) + label
+	position: relative
+	padding-left: 28px
+	cursor: pointer
+	line-height: 20px
+	display: inline-block
+	color: #666
+
+[type="radio"]:checked + label:before, [type="radio"]:not(:checked) + label:before
+	content: ''
+	position: absolute
+	left: 0
+	top: 0
+	width: 18px
+	height: 18px
+	border: 1px solid #ddd
+	border-radius: 100%
+	background: #fff
+
+[type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after
+	content: ''
+	width: 12px
+	height: 12px
+	background: #403866
+	position: absolute
+	top: 3px
+	left: 3px
+	border-radius: 100%
+	-webkit-transition: all 0.2s ease
+	transition: all 0.2s ease
+
+[type="radio"]:not(:checked) + label:after
+	opacity: 0
+	-webkit-transform: scale(0)
+	transform: scale(0)
+
+[type="radio"]:checked + label:after
+	opacity: 1
+	-webkit-transform: scale(1)
+	transform: scale(1)
+// custom radio end
+
+// custom checkbox
+.checkbox-container
+	display: block
+	position: relative
+	padding-left: 26px
+	margin-bottom: 12px
+	cursor: pointer
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	font-size: 12px
+	font-family: Roboto, sans-serif
+
+.checkbox-container input
+	position: absolute
+	opacity: 0
+	cursor: pointer
+	height: 0
+	width: 0
+
+.checkmark
+	position: absolute
+	top: 0
+	left: 0
+	height: 16px
+	width: 16px
+	border: 1px solid #EAEAEA
+	border-radius: 2px
+
+.checkbox-container:hover input ~ .checkmark
+	background-color: #EAEAEA
+
+.checkbox-container input:checked ~ .checkmark
+	border: 1px solid #EAEAEA
+	border-radius: 2px
+
+.checkmark:after
+	content: ""
+	position: absolute
+	display: none
+
+.checkbox-container input:checked ~ .checkmark:after
+	display: block
+
+.checkbox-container .checkmark:after
+	left: 4px
+	top: 1px
+	width: 7px
+	height: 11px
+	border: solid #403866
+	border-width: 0 3px 3px 0
+	-webkit-transform: rotate(45deg)
+	-ms-transform: rotate(45deg)
+	transform: rotate(45deg)
+// custom checkbox end
+	
+	
 // responsive
 body
 	+r(768)
@@ -288,10 +462,78 @@ body
 			padding: 0
 
 		.content .tickets-select
-			flex: 1
+			flex: 1 1 auto
+			overflow-y: auto
 			margin-right: 0
 			margin-bottom: -30px
+			display: flex
+			flex-direction: column
+			padding: 0 16px
 			
+			.text-input-mobile
+				height: 48px
+				min-height: 48px
+				font-size: 14px
+				padding-left: 16px
+				border: 1px solid #EAEAEA
+				box-sizing: border-box
+				border-radius: 4px
+				line-height: 24px
+				margin-top: 16px
+
+			.text-input-mobile::placeholder
+				color: $black
+
+			.inline-inputs-wrapper
+				display: flex
+				flex-direction: row
+				.text-input-mobile:first-child
+					margin-right: 16px
+				.text-input-mobile
+					width: 144px
+
+			.checkbox-wrapper
+				display: flex
+				margin-top: 16px
+
+			.delivery-types-wrapper-m
+				display: flex
+				flex-direction: column
+
+				.delivery-checkbox-label-m
+					display: flex
+					flex-direction: column
+					margin-top: 16px
+					margin-left: 14px
+
+					.label-title
+						font-family: Roboto, sans-serif
+						font-style: normal
+						font-weight: 500
+						font-size: 12px
+						line-height: 14px
+						letter-spacing: 0.02em
+
+					.label-text
+						font-family: Roboto, sans-serif
+						font-style: normal
+						font-weight: normal
+						font-size: 12px
+						line-height: 20px
+						letter-spacing: 0.02em
+						opacity: 0.4
+						margin-top: 4px
+
+			.payment-description
+				font-family: Roboto, sans-serif
+				font-style: normal
+				font-weight: normal
+				font-size: 14px
+				line-height: 24px
+				padding-left: 16px
+				padding-top: 12px
+				opacity: 0.8
+
 			.tickets-select-header
 				display: none
 				opacity: 0.8
@@ -300,8 +542,26 @@ body
 				display: flex
 				height: fit-content
 				width: 100%
-				padding-left: 16px
+				font-size: 14px
 				padding-top: 19px
+				opacity: 0.8
+				&.sub-header
+					opacity: 1
+
+			.tickets-select-text
+				.subheader-text
+					opacity: 0.8
+					margin: 8px 0 4px 0
+
+				.text
+					opacity: 0.6
+
+				font-family: Roboto, sans-serif
+				font-style: normal
+				font-weight: normal
+				font-size: 12px
+				line-height: 20px
+				margin-top: 3px
 
 			.control-button
 				width: 32px
@@ -343,6 +603,65 @@ body
 				img
 					margin-right: 6px
 
+			.lp-header
+				padding-top: 36px
+				font-weight: bold
+				font-size: 16px
+				line-height: 20px
+				display: flex
+				align-items: center
+				color: $black
+				opacity: 0.6
+				justify-content: flex-start
+
+			.lp-image-wrapper
+				margin-top: 12px
+				margin-bottom: 16px
+				display: flex
+				justify-content: center
+				img
+					width: 70%
+					&.lp-2
+						width: 70%
+
+			.lp-order-info
+				font-size: 14px
+				line-height: 20px
+				display: flex
+				align-items: center
+				letter-spacing: 0.02em
+				opacity: 0.6
+				text-align: center
+				justify-content: flex-start
+				padding: 0
+				&.m-b-small
+					margin-bottom: 4px
+			
+			.lp-gratitude
+				font-weight: bold
+				font-size: 16px
+				line-height: 19px
+				display: flex
+				align-items: center
+				opacity: 0.6
+				margin-top: 19px
+				justify-content: flex-start
+
+			.lp-button-w
+				display: flex
+				justify-content: center
+				margin-top: 32px
+				
+			.lp-button
+				background-color: #403866
+				width: 288px
+				height: 48px
+				border-radius: 6px
+				color: white
+				font-weight: 500
+				font-size: 14px
+				line-height: 16px
+
 		.content .tickets-list-wrapper
 			display: none
 
@@ -374,3 +693,7 @@ body
 				background: #534c75
 				color: $white
 				border-radius: 4px
+
+				&.button-white
+					color: $black
+					background-color: $white

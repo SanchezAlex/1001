@@ -1,0 +1,83 @@
+{% extends "layouts/_layout.html" %}
+{% block content %}
+<div class="tickets">
+  <header class="main-header">
+    <div class="main-header-content">
+      <div class="info-wrapper">
+        <img class="main-header-logo" src="img/book-pages/book-tickets-header-logo.png" alt="logo" />
+        <div class="event-name">Monatik love it ритм тур</div>
+        <div class="event-date">30 Февраля 2020 (Cреда)</div>
+        <div class="event-time">12:45</div>
+        <div class="event-place">Стадион “Олимпийский”, Киев</div>
+      </div>
+      <div class="main-header-timer-wrapper">
+        <div class="main-header-timer">15:00</div>
+      </div>
+    </div>
+    <div class="main-header-content-mobile">
+      <div class="logo-block">
+        <img class="icon-24" src="img/book-pages/back.png" alt="back" />
+        <img class="main-header-logo" src="img/book-pages/book-tickets-header-logo.png" alt="logo" />
+        <div class="main-header-timer-mobile">15:25</div>
+      </div>
+      <div class="event-name">Monatik love it ритм тур</div>
+      <div class="event-date"><img class="icon-24" src="img/book-pages/calendar.png" alt="calendar" /><span class="event-text">30 Февраля 2020 (Cреда)</span></div>
+      <div class="event-time"><img class="icon-24" src="img/book-pages/clock.png" alt="time" /><span class="event-text">12:45</span></div>
+      <div class="event-place"><img class="icon-24" src="img/book-pages/location.png" alt="location" /><span class="event-text">Стадион “Олимпийский”, Киев</span></div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="tickets-select">
+      <div class="tickets-select-header-mobile">Контакты</div>
+      <input class="text-input-mobile" type="text" name="" placeholder="Имя" />
+      <input class="text-input-mobile" type="text" name="" placeholder="Номер телефона" />
+      <input class="text-input-mobile" type="text" name="" placeholder="Email" />
+      <textarea class="text-input-mobile" rows="4" placeholder="Комментарии"></textarea>
+      <div class="checkbox-wrapper">
+        <label class="checkbox-container">Покупая билет, я соглашаюсь с условиями возврата и договора оферты
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="tickets-select-header-mobile sub-header">Адрес офиса</div>
+      <div class="tickets-select-text">
+        <div class="subheader-text"> Площадь Победы, 3</div>
+        <div class="text">подземный переход между Цирком и Универмагом «Украина»</div>
+        <div class="text">Пн - Пт с 9:00 - 18:00</div>
+        <div class="text">Сб - Вс - выходные</div>
+      </div>
+    </div>
+    <div class="tickets-list-wrapper-mobile">
+      <div class="total-amount">
+        <img class="icon-16" src="img/book-pages/wallet.png" alt="total" />
+        <div>
+          <div>0 билетов</div>
+          <div>0 &#8372;</div>
+        </div>
+      </div>
+      <div><button class="accept-button-m"><span>Подтвердить</span></button></div>
+    </div>
+    <div class="tickets-list-wrapper">
+      <div class="tickets-list-header">Выберите, пожалуйста, билеты</div>
+      <div class="tickets-list"></div>
+      <div class="tickets-list-footer">
+        <div class="footer-item">
+          <span class="footer-item-text">Выбрано мест: </span><span>0</span>
+        </div>
+        <div class="footer-item">
+          <span class="footer-item-text">Стоимость: </span><span>0 &#8372;</span>
+        </div>
+        <div class="footer-item last-item">
+          <span class="footer-item-text">Сервисный сбор: </span><span>0 &#8372;</span>
+        </div>
+        <div class="footer-item">
+          <span class="footer-item-text text-bold">К оплате: </span><span>0 &#8372;</span>
+        </div>
+        <div>
+          <button class="accept-button">Продолжить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

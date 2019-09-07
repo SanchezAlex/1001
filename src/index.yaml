@@ -4,4 +4,22 @@ PageList:
 - file: main.html
   ready: 70
 - file: book-tickets.html
-  ready: 10
+  ready: 75
+- file: e-ticket-contacts.html
+  ready: 40
+- file: e-ticket-delivery.html
+  ready: 40
+- file: e-ticket-payment.html
+  ready: 40
+- file: courier-contacts.html
+  ready: 40
+- file: book-contacts.html
+  ready: 40
+- file: np-post-contacts.html
+  ready: 40
+- file: last-screen-1.html
+  ready: 40
+- file: last-screen-2.html
+  ready: 40
+- file: last-screen-3.html
+  ready: 40
