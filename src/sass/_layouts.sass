@@ -2,6 +2,9 @@
 
 .intro
   position: relative
+
+  +r(992)
+    margin-top: 100px
   
 .slider
   width: 100%
@@ -87,28 +90,43 @@
   .owl-prev
     position: absolute
     top: 50%
-    left: 10%
+    left: 0
+    width: 80px
+    height: 80px
+    border-radius: 50%
     transform: translate(50%, -100%)
     color: #fff
+    transition: .3s ease
 
-    +r(1445)
-      left: 5%
+    &:hover
+      background: rgba(0, 0, 0, 0.3)
 
     +r(992)
-      left: 0%
+      left: 0
+      width: auto
+      height: auto
 
   .owl-next
     position: absolute
     top: 50%
-    right: 10%
+    right: 0
+    width: 80px
+    height: 80px
+    border-radius: 50%
     transform: translate(-50%, -100%)
     color: #fff
+    transition: .3s ease
 
-    +r(1445)
-      right: 5%
+    &:hover
+      background: rgba(0, 0, 0, 0.3)
+
+      +r(1024)
+        background: none
 
     +r(992)
-      right: 0%
+      right: 0
+      width: auto
+      height: auto
 
   .btn--yellow
     padding: 16px 50px
@@ -160,10 +178,12 @@
     color: #fff
     border-bottom: 1px solid #ffffff
     letter-spacing: 0.02em
-    
+    transition: .3s ease
+
     &:hover 
       text-decoration: none
-      color: #fff
+      color: #ffb100
+      border-color: #ffb100
 
 .icon-arrow-left
   stroke: #ffffff
@@ -200,7 +220,7 @@
       text-align: right
       font-size: 14px
 
-    span
+    span :first-of-type
       border-bottom: 1px solid #000000
 
     +r(990)
@@ -215,6 +235,95 @@
 
   &.kids
     padding-bottom: 60px
+
+.soon-info
+  display: inline-block
+  position: relative
+
+  &__main-btn
+    display: inline-block
+    font-size: 18px
+    line-height: 21px
+    padding-bottom: 3px
+    border-bottom: 1px solid #000
+    transition: .3s ease
+    cursor: pointer
+
+    &:hover
+      color: #ffb100
+      border-color: #ffb100
+
+  &__block
+    display: none
+    flex-direction: column
+    position: absolute
+    top: 0
+    left: 0
+    padding: 20px 20px 40px 40px
+    width: 375px
+    height: 360px
+    background: #FFFFFF
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5)
+    z-index: 2
+    text-align: left
+    transition: .3s ease
+
+    &.active
+      display: flex
+
+    +r(992)
+      width: 300px
+      padding: 10px 15px 30px
+      right: 0
+      left: auto
+
+  &__title
+    display: inline-block
+    padding: 20px 0
+    font-family: 'Roboto', sans-serif
+    font-size: 24px
+    line-height: 28px
+    letter-spacing: 0.02em
+    color: #000000
+
+    +r(992)
+      font-size: 21px
+      line-height: 24px
+
+  &__list
+    overflow-y: auto
+
+  &__item
+    margin: 15px 0
+
+  &__link
+    display: flex
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: 0.02em
+    color: #000000
+    transition: .3s ease
+
+    &:hover
+      text-decoration: none
+      color: #ffb100
+
+  &__time
+    margin-right: 10px
+
+  &__close-btn
+    display: inline-block
+    position: absolute
+    right: 20px
+    top: 10px
+    padding: 3px
+    font-size: 16px
+    line-height: 19px
+    color: #000
+    transition: .3s ease
+    
+    &:hover
+      color: #ffb100
 
 .title-block
   display: flex
@@ -502,6 +611,10 @@
       z-index: 2
 
   &__title
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow: hidden
     font-size: 24px
     line-height: 28px
 
@@ -510,8 +623,8 @@
       line-height: 22px
 
     +r(440)
-      font-size: 17px
-      line-height: 22px
+      font-size: 24px
+      line-height: 28px
       text-align: left
 
   &__date-time

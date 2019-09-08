@@ -31,6 +31,10 @@
     position: relative
 
     +r(992)
+      position: fixed
+      background: #fff
+      left: 0
+      right: 0
       height: 60px
 
       &::after
@@ -55,7 +59,7 @@
       flex-direction: column
       justify-content: center
       order: 3
-      flex: 3
+      flex: 0
       position: initial
       max-width: 90px
       background: none
@@ -70,15 +74,13 @@
     +r(992)
       padding-top: 5px
       border-top: none
+      overflow-y: auto
 
   .nav-item
     padding-left: 20px
 
     +r(1280)
       padding-left: 15px
-
-    +r(1190)
-      padding-left: 10px
 
   .logo
     display: flex
@@ -104,6 +106,20 @@
     border: none
     z-index: 4
 
+    &[aria-expanded='true']
+      display: flex
+      align-items: center
+
+      .navbar-line
+        transform: rotate(135deg)
+
+        &::before
+          display: none
+
+        &::after
+          top: 0
+          transform: rotate(90deg)
+
     +r(992)
       order: 1
       flex: 1
@@ -123,16 +139,25 @@
     width: 100%
     background: #FFB100
     height: 2px
-    margin: 3px 0
+    position: relative
+    transition: .3s ease
 
     &::before,
     &::after
       content: ''
       display: inline-block
+      position: absolute
       width: 100%
       background: #FFB100
       height: 2px
+      left: 0
+      transition: .3s ease
 
+    &::before
+      bottom: 12px
+
+    &::after
+      bottom: 6px
 
   &__navbar-collapse
     height: 100%
@@ -141,13 +166,14 @@
       order: 3
       flex: 3
       position: fixed
-      height: 100vh
+      min-height: 100vh
       width: 100vw
       left: 0
       z-index: 3
       top: 0
       background: #1c222a
-      padding-top: 50px
+      margin-top: 60px
+      padding-bottom: 60px
       overflow-y: auto
 
   &__nav-link
@@ -315,7 +341,7 @@
 
     +r(992)
       margin: 3px 0
-      padding-left: 10px
+      padding-left: 15px
 
   &__link
     font-size: 12px
@@ -323,6 +349,11 @@
     letter-spacing: 0.02em
     text-transform: uppercase
     color: #000
+    transition: .3s ease
+
+    &:hover
+      color: #ffb100
+      text-decoration: none
 
     +r(992)
       font-size: 12px
@@ -342,11 +373,14 @@
   letter-spacing: 0.02em
   color: #000
 
+  &:hover
+    text-decoration: none
+
   +r(992)
     padding-top: 10px
     margin-bottom: 20px
     position: initial
-    padding-left: 10px
+    padding-left: 15px
     transform: initial
     line-height: 16px
     color: #fff
@@ -356,6 +390,11 @@
     +r(992)
       display: block
       margin-right: 10px
+
+  &__text
+    transition: .3s ease
+    &:hover
+      color: #ffb100
 
 .dropdown
   button
@@ -386,8 +425,6 @@
 
 .search-form
   display: block
-  width: 25px
-  height: 25px
   position: relative
 
 .form-group
@@ -397,7 +434,7 @@
     display: flex
     align-items: center
     position: absolute
-    top: 0
+    top: 50%
     right: -5px
     outline: none
     width: 0
@@ -410,7 +447,7 @@
     z-index: 10
     background: transparent
     border: none
-    transform: translateY(-21%)
+    transform: translateY(-50%)
     transition: .5s ease
 
   input[type="text"]
