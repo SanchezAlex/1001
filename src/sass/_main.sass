@@ -31,6 +31,10 @@
     position: relative
 
     +r(992)
+      position: fixed
+      background: $white
+      left: 0
+      right: 0
       height: 60px
 
       &::after
@@ -55,7 +59,7 @@
       flex-direction: column
       justify-content: center
       order: 3
-      flex: 3
+      flex: 0
       position: initial
       max-width: 90px
       background: none
@@ -70,15 +74,13 @@
     +r(992)
       padding-top: 5px
       border-top: none
+      overflow-y: auto
 
   .nav-item
     padding-left: 20px
 
     +r(1280)
       padding-left: 15px
-
-    +r(1190)
-      padding-left: 10px
 
   .logo
     display: flex
@@ -104,6 +106,20 @@
     border: none
     z-index: 4
 
+    &[aria-expanded='true']
+      display: flex
+      align-items: center
+
+      .navbar-line
+        transform: rotate(135deg)
+
+        &::before
+          display: none
+
+        &::after
+          top: 0
+          transform: rotate(90deg)
+
     +r(992)
       order: 1
       flex: 1
@@ -113,7 +129,7 @@
       margin-left: 20px
 
       .icon
-        stroke: #FFB100
+        stroke: $yellow
 
     +r(768)
       margin-left: 10px
@@ -121,18 +137,27 @@
   .navbar-line
     display: inline-block
     width: 100%
-    background: #FFB100
+    background: $yellow
     height: 2px
-    margin: 3px 0
+    position: relative
+    transition: .3s ease
 
     &::before,
     &::after
       content: ''
       display: inline-block
+      position: absolute
       width: 100%
-      background: #FFB100
+      background: $yellow
       height: 2px
+      left: 0
+      transition: .3s ease
 
+    &::before
+      bottom: 12px
+
+    &::after
+      bottom: 6px
 
   &__navbar-collapse
     height: 100%
@@ -141,25 +166,26 @@
       order: 3
       flex: 3
       position: fixed
-      height: 100vh
+      min-height: 100vh
       width: 100vw
       left: 0
       z-index: 3
       top: 0
       background: #1c222a
-      padding-top: 50px
+      margin-top: 60px
+      padding-bottom: 60px
       overflow-y: auto
 
   &__nav-link
     font-size: 14px
     line-height: 19px
     letter-spacing: 0.02em
-    color: #FFFFFF !important
+    color: $white !important
     text-transform: uppercase
     transition: .3s ease
     
     &:hover
-      color: #FFB100 !important
+      color: $yellow !important
 
     +r(1190)
       font-size: 12px
@@ -177,7 +203,7 @@
     .icon
       width: 25px
       height: 25px
-      fill: #FFB100
+      fill: $yellow
 
       +r(992)
         width: 18px
@@ -199,7 +225,7 @@
 
     button
       margin: 0 10px
-      color: #ffffff
+      color: $white
       text-transform: none
       font-size: 14px
       line-height: 16px
@@ -227,7 +253,7 @@
         align-self: initial
 
       span
-        color: #fff
+        color: $white
 
         +r(992)
           display: none
@@ -274,11 +300,11 @@
     padding-left: 0
 
   span
-    color: #ffffff
+    color: $white
     cursor: pointer
 
     &:hover
-      color: #ffb100
+      color: $yellow
 
     +r(992)
       display: none
@@ -315,20 +341,25 @@
 
     +r(992)
       margin: 3px 0
-      padding-left: 10px
+      padding-left: 15px
 
   &__link
     font-size: 12px
     line-height: 16px
     letter-spacing: 0.02em
     text-transform: uppercase
-    color: #000
+    color: $black
+    transition: .3s ease
+
+    &:hover
+      color: $yellow
+      text-decoration: none
 
     +r(992)
       font-size: 12px
       line-height: 14px
       letter-spacing: 0.02em
-      color: #FFFFFF
+      color: $white
       text-transform: initial
 
 .phone
@@ -340,22 +371,30 @@
   font-size: 14px
   line-height: 19px
   letter-spacing: 0.02em
-  color: #000
+  color: $black
+
+  &:hover
+    text-decoration: none
 
   +r(992)
     padding-top: 10px
     margin-bottom: 20px
     position: initial
-    padding-left: 10px
+    padding-left: 15px
     transform: initial
     line-height: 16px
-    color: #fff
+    color: $white
 
   &__icon
     display: none
     +r(992)
       display: block
       margin-right: 10px
+
+  &__text
+    transition: .3s ease
+    &:hover
+      color: $yellow
 
 .dropdown
   button
@@ -386,8 +425,6 @@
 
 .search-form
   display: block
-  width: 25px
-  height: 25px
   position: relative
 
 .form-group
@@ -397,7 +434,7 @@
     display: flex
     align-items: center
     position: absolute
-    top: 0
+    top: 50%
     right: -5px
     outline: none
     width: 0
@@ -410,7 +447,7 @@
     z-index: 10
     background: transparent
     border: none
-    transform: translateY(-21%)
+    transform: translateY(-50%)
     transition: .5s ease
 
   input[type="text"]
@@ -437,7 +474,7 @@
   cursor: pointer
   
 .form-control-submit
-  background: #fff
+  background: $white
   opacity: 0
   color: transparent
   border: none
@@ -451,7 +488,7 @@
   .form-control
     width: 450px
     height: 43px
-    background: #fff
+    background: $white
     border: 1px solid #ddd
     padding-left: 10px
 
@@ -474,7 +511,7 @@
 // footer start
 
 .footer
-  background-color: #000
+  background-color: $black
 
   &__wrap
     padding: 100px 0
@@ -503,7 +540,7 @@
     
   .copyright
     margin-top: 15px
-    color: #fff
+    color: $white
     font-size: 16px
     line-height: 19px
 
@@ -517,7 +554,7 @@
     a
       display: inline-block
       margin-top: 5px
-      color: #fff
+      color: $white
 
   .social
     position: initial
@@ -533,12 +570,12 @@
     font-size: 16px
     line-height: 19px
     letter-spacing: 0.02em
-    color: #FFFFFF
+    color: $white
     text-decoration: none
     transition: .3s ease
 
     &:hover
-      color: #FFB100
+      color: $yellow
 
     +r(1280)
       margin: 10px 0

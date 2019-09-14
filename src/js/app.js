@@ -204,4 +204,14 @@ $(document).ready(function() {
     $('.nav-item-more .more-items').toggleClass('active');
   });
 
+
+  // soon info block
+  $('.soon-info__main-btn').click(function() {
+    $('.soon-info__block').addClass('active');
+  });
+
+  $('.soon-info__close-btn').click(function() {
+    $('.soon-info__block').removeClass('active');
+  });
+
 });
