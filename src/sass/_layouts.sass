@@ -42,7 +42,7 @@
     font-size: 64px
     line-height: 75px
     letter-spacing: .02em
-    color: #fff
+    color: $white
 
     +r(769)
       font-size: 44px
@@ -55,7 +55,7 @@
     font-size: 24px
     line-height: 28px
     letter-spacing: .02em
-    color: #fff
+    color: $white
 
   &__info
     margin: 36px 0
@@ -82,7 +82,7 @@
       &__text
         font-size: 18px
         letter-spacing: .02em
-        color: #fff
+        color: $white
 
         +r(992)
           font-size: 14px
@@ -95,7 +95,7 @@
     height: 80px
     border-radius: 50%
     transform: translate(50%, -100%)
-    color: #fff
+    color: $white
     transition: .3s ease
 
     &:hover
@@ -114,7 +114,7 @@
     height: 80px
     border-radius: 50%
     transform: translate(-50%, -100%)
-    color: #fff
+    color: $white
     transition: .3s ease
 
     &:hover
@@ -151,14 +151,14 @@
     width: 26px
     height: 26px
     margin: 5px
-    border: 2px solid #fff
+    border: 2px solid $white
     -webkit-border-radius: 50%
     -moz-border-radius: 50%
     border-radius: 50%
 
     .fab
       font-size: 12px
-      color: #fff
+      color: $white
 
 .old-site
   position: absolute
@@ -175,18 +175,18 @@
     padding-bottom: 2px
     font-size: 14px
     line-height: 16px
-    color: #fff
-    border-bottom: 1px solid #ffffff
+    color: $white
+    border-bottom: 1px solid $white
     letter-spacing: 0.02em
     transition: .3s ease
 
     &:hover 
       text-decoration: none
-      color: #ffb100
-      border-color: #ffb100
+      color: $yellow
+      border-color: $yellow
 
 .icon-arrow-left
-  stroke: #ffffff
+  stroke: $white
   fill: transparent
   font-size: 50px
 
@@ -194,7 +194,7 @@
     font-size: 35px
 
 .icon-arrow-right
-  stroke: #ffffff
+  stroke: $white
   fill: transparent
   font-size: 50px
 
@@ -214,14 +214,14 @@
     line-height: 21px
     padding-bottom: 2px
     letter-spacing: 0.02em
-    color: #000000
+    color: $black
 
     +r(992)
       text-align: right
       font-size: 14px
 
     span :first-of-type
-      border-bottom: 1px solid #000000
+      border-bottom: 1px solid $black
 
     +r(990)
 
@@ -245,13 +245,13 @@
     font-size: 18px
     line-height: 21px
     padding-bottom: 3px
-    border-bottom: 1px solid #000
+    border-bottom: 1px solid $black
     transition: .3s ease
     cursor: pointer
 
     &:hover
-      color: #ffb100
-      border-color: #ffb100
+      color: $yellow
+      border-color: $yellow
 
   &__block
     display: none
@@ -262,7 +262,7 @@
     padding: 20px 20px 40px 40px
     width: 375px
     height: 360px
-    background: #FFFFFF
+    background: $white
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5)
     z-index: 2
     text-align: left
@@ -284,7 +284,7 @@
     font-size: 24px
     line-height: 28px
     letter-spacing: 0.02em
-    color: #000000
+    color: $black
 
     +r(992)
       font-size: 21px
@@ -301,12 +301,12 @@
     font-size: 16px
     line-height: 19px
     letter-spacing: 0.02em
-    color: #000000
+    color: $black
     transition: .3s ease
 
     &:hover
       text-decoration: none
-      color: #ffb100
+      color: $yellow
 
   &__time
     margin-right: 10px
@@ -319,11 +319,11 @@
     padding: 3px
     font-size: 16px
     line-height: 19px
-    color: #000
+    color: $black
     transition: .3s ease
     
     &:hover
-      color: #ffb100
+      color: $yellow
 
 .title-block
   display: flex
@@ -356,7 +356,7 @@
     .icon
       width: 25px
       height: 25px
-      fill: #000000
+      fill: $black
 
       +r(992)
         width: 20px
@@ -364,7 +364,7 @@
 
   .dropdown
     .btn
-      color: #000
+      color: $black
       margin: 0 15px
       text-transform: none
       font-size: 18px
@@ -421,14 +421,14 @@
       display: inline-block
       font-size: 24px
       line-height: 28px
-      color: #000
+      color: $black
 
     &__month
       display: block
       padding-top: 5px
       font-size: 18px
       line-height: 21px
-      color: #000
+      color: $black
       text-transform: lowercase
       transition: .3s ease
       opacity: 0
@@ -437,7 +437,7 @@
       display: block
       height: 2px
       width: 100%
-      background: #000
+      background: $black
       position: relative
       opacity: 0
       transition: .3s ease
@@ -446,7 +446,7 @@
       &::after
         content: ''
         position: absolute
-        background: #000
+        background: $black
         top: 0
         bottom: 0
         height: 2px
@@ -472,9 +472,9 @@
 .calendar-prev
   position: absolute
   transform: rotate(90deg)
-  background: #fff
+  background: $white
   .icon
-    stroke: #FFB100
+    stroke: $yellow
     font-size: 30px
 
 .calendar-prev
@@ -492,7 +492,7 @@
   margin-top: 10px
   margin-bottom: 50px
   margin-left: 27px
-  border: 1px solid #FFB100
+  border: 1px solid $yellow
   position: relative
 
   +r(992)
@@ -506,7 +506,7 @@
   &__text
     font-size: 18px
     line-height: 21px
-    color: #000
+    color: $black
     text-align: center
 
   &__icon
@@ -517,7 +517,7 @@
     left: 0
     top: 0
     transform: translate(-50%, -50%)
-    background: #fff
+    background: $white
     padding: 10px
 
 .poster
@@ -540,7 +540,7 @@
       right: 0
       top: 0
       bottom: 0
-      background: linear-gradient(270deg, #000000 0%, rgba(255, 255, 255, 0) 110%)
+      background: linear-gradient(270deg, $black 0%, rgba(255, 255, 255, 0) 110%)
 
   +r(440)
     width: 100%
@@ -571,9 +571,9 @@
     padding: 15px 15px 45px 15px
     font-size: 14px
     line-height: 16px
-    color: #000
+    color: $black
     text-align: center
-    background: linear-gradient(360deg, #FFB100 0%, rgba(196, 196, 196, 0.7) 100%)
+    background: linear-gradient(360deg, $yellow 0%, rgba(196, 196, 196, 0.7) 100%)
     opacity: 0
     transform: translateY(100%)
     transition: ease .3s
@@ -595,7 +595,7 @@
       line-height: 15px
 
       +r(440)
-        background: #FFB100
+        background: $yellow
 
     +r(440)
       padding: 10px
@@ -607,7 +607,7 @@
       background: none
       right: 0
       left: auto
-      color: #ffffff
+      color: $white
       z-index: 2
 
   &__title
@@ -686,7 +686,7 @@
       font-size: 16px
 
     a
-      color: #000
+      color: $black
       text-decoration: none
 
     &:hover
@@ -702,7 +702,7 @@
     transition: .3s ease
 
     &:hover
-      border-color: #FFB100
+      border-color: $yellow
 
   .owl-nav
     display: flex
@@ -744,7 +744,7 @@
         right: 0
         top: 0
         bottom: 0
-        background: linear-gradient(270deg, #000000 0%, rgba(255, 255, 255, 0) 110%)
+        background: linear-gradient(270deg, $black 0%, rgba(255, 255, 255, 0) 110%)
 
     img
 
@@ -771,9 +771,9 @@
     padding: 30px 15px 50px
     font-size: 14px
     line-height: 16px
-    color: #000
+    color: $black
     text-align: center
-    background: linear-gradient(360deg, #FFB100 0%, rgba(196, 196, 196, 0.7) 100%)
+    background: linear-gradient(360deg, $yellow 0%, rgba(196, 196, 196, 0.7) 100%)
     opacity: 0
     transform: translateY(100%)
     transition: ease .3s
@@ -793,7 +793,7 @@
       background: none
       right: 0
       left: auto
-      color: #ffffff
+      color: $white
       z-index: 2
       align-items: start
       text-align: left
@@ -812,7 +812,7 @@
         padding: 7px 30px
         font-size: 13px
         line-height: 15px
-        background: #FFB100
+        background: $yellow
 
   &__title
     display: -webkit-box
@@ -880,7 +880,7 @@
       height: 10px
 
     &.active
-      background-color: #000000
+      background-color: $black
 
 .slider-theaters-prev,
 .slider-places-prev,
@@ -895,7 +895,7 @@
     transform: translate(-50%, -50%)
 
   .icon-arrow-left
-    stroke: #000000
+    stroke: $black
     font-size: 54px
 
     +r(1024)
@@ -914,7 +914,7 @@
     transform: translate(50%, -50%)
 
   .icon-arrow-right
-    stroke: #000000
+    stroke: $black
     font-size: 54px
 
     +r(1024)
@@ -928,7 +928,7 @@
   left: -30px
   transform: translate(0, -50%)
   .icon-arrow-left
-    stroke: #000000
+    stroke: $black
     font-size: 27px
 
   +r(440)
@@ -942,7 +942,7 @@
   right: -30px
   transform: translate(0, -50%)
   .icon-arrow-right
-    stroke: #000000
+    stroke: $black
     font-size: 27px
 
   +r(440)
