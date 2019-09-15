@@ -72,6 +72,26 @@ header.main-header:before
 	z-index: 2
 	padding: 0 32px
 
+.menu-stroke
+	position: absolute
+	bottom: -5px
+	line
+		stroke: #F6F6F4
+		stroke-linecap: round
+		stroke-width: 4px
+	&.selected
+		bottom: -15px
+		z-index: 2
+		left: 0
+		line
+			stroke: #403866
+	&.selected-2
+		width: 200%
+
+	&.success
+		line
+			stroke: #F0A33B
+
 .content .tickets-select
 	display: flex
 	flex-direction: column
@@ -82,6 +102,89 @@ header.main-header:before
 	margin-right: 16px
 	color: $black
 	position: relative
+	&.e-ticket
+		align-items: center
+		padding-left: 16px
+		padding-right: 16px
+		.header-elem
+			flex-grow: 1
+			position: relative
+
+	.tickets-select-subheader
+		font-size: 16px
+		line-height: 19px
+		width: 100%
+		max-width: 768px
+
+	.proceed-button
+		width: 100%
+		max-width: 768px
+		margin-top: 28px
+		button
+			background-color: #403866
+			color: $white
+			border-radius: 6px
+			height: 48px
+			width: 240px
+
+	.delivery-types-wrapper-m
+			width: 100%
+			max-width: 768px
+			display: flex
+			flex-direction: column
+
+			.delivery-checkbox-label-m
+				display: flex
+				flex-direction: column
+				margin-top: 32px
+
+				.label-title
+					font-family: Roboto, sans-serif
+					font-style: normal
+					font-weight: 500
+					font-size: 14px
+					line-height: 14px
+					letter-spacing: 0.02em
+
+				.label-text
+					font-family: Roboto, sans-serif
+					font-style: normal
+					font-weight: normal
+					font-size: 14px
+					line-height: 20px
+					letter-spacing: 0.02em
+					opacity: 0.6
+					margin-top: 14px
+
+
+	.text-input-mobile
+		display: none
+
+	.text-input-wrapper
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		width: 100%
+		max-width: 768px
+		margin-top: 14px
+
+	.text-input
+		height: 48px
+		min-height: 48px
+		font-size: 14px
+		padding-left: 16px
+		border: 1px solid #EAEAEA
+		box-sizing: border-box
+		border-radius: 4px
+		line-height: 24px
+		margin-top: 16px
+		width: 288px
+
+	.text-input::placeholder
+		color: $black
+
+	.checkbox-wrapper
+		display: none
 
 	.control-button
 		width: 32px
@@ -117,9 +220,22 @@ header.main-header:before
 		color: $black
 		opacity: 0.8
 		width: 100%
+		position: relative
+		&.e-ticket
+			max-width: 768px
+			padding-bottom: 10px
+			margin-bottom: 28px
 
 	.tickets-select-header-mobile
 		display: none
+
+	.payment-description
+		font-size: 14px
+		line-height: 24px
+		opacity: 0.8
+		margin-top: 14px
+		width: 100%
+		max-width: 768px
 
 	.lp-header
 		padding-top: 36px
@@ -197,6 +313,47 @@ header.main-header:before
 	background-color: $white
 	color: $black
 	border-radius: 20px
+
+	&.e-ticket
+		min-width: 320px
+		.accept-button
+			display: none
+
+	.tickets-list
+		display: flex
+		padding-top: 28px
+		overflow-y: auto
+		flex-direction: column
+		justify-content: flex-start
+		align-items: center
+
+	.tickets-list .ticket
+		background-image: url(../img/book-pages/ticket-background.png)
+		height: 80px
+		width: 256px
+		margin-bottom: 16px
+		padding: 16px 16px 16px 32px
+		.seat-place
+			font-family: Roboto, sans-serif
+			font-style: normal
+			font-weight: bold
+			font-size: 18px
+		.seat-info
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			font-style: normal
+			font-weight: normal
+			font-size: 14px
+			line-height: 16px
+			margin-top: 10px
+			.seat-info-sum
+				display: flex
+				flex-direction: row
+			.seat-info-sum>div
+				margin-right: 12px
+			.seat-info-sum span
+				opacity: 0.6
 
 .content .tickets-list-wrapper-mobile
 	display: none
@@ -368,8 +525,10 @@ header.main-header:before
 	transform: rotate(45deg)
 // custom checkbox end
 	
-	
+
+//
 // responsive
+//
 body
 	+r(768)
 		.tickets
@@ -469,8 +628,21 @@ body
 			display: flex
 			flex-direction: column
 			padding: 0 16px
+			&.e-ticket
+				align-items: unset
+				padding: 0 16px
+
+			.tickets-select-subheader
+				display: none
+
+			.proceed-button
+				display: none
+
+			.text-input-wrapper
+				display: none
 			
 			.text-input-mobile
+				display: flex
 				height: 48px
 				min-height: 48px
 				font-size: 14px
