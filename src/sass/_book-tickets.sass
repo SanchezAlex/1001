@@ -110,6 +110,14 @@ header.main-header:before
 			flex-grow: 1
 			position: relative
 
+	.inline-inputs-wrapper
+		display: flex
+		flex-direction: row
+		.text-input:first-child
+			margin-right: 16px
+		.text-input
+			width: 136px
+
 	.tickets-select-subheader
 		font-size: 16px
 		line-height: 19px
@@ -168,6 +176,34 @@ header.main-header:before
 		max-width: 768px
 		margin-top: 14px
 
+		&.book-c
+			display: flex
+			flex-direction: row
+		.contacts
+			display: flex
+			flex-direction: column
+			width: 50%
+		.map
+			width: 50%
+			.map-wrapper
+				width: 100%
+				height: 176px
+				background-color: #9e9e9e
+				margin-top: 16px
+
+			.map-info
+				margin-top: 16px
+				text-align: right
+				.header
+					font-weight: bold
+					font-size: 14px
+					line-height: 16px
+					margin-bottom: 6px
+				.text
+					font-size: 14px
+					line-height: 20px
+					text-align: right
+
 	.text-input
 		height: 48px
 		min-height: 48px
@@ -188,7 +224,9 @@ header.main-header:before
 		&.d
 			display: flex
 		&.book-c
-			padding-top: 16px
+			margin-top: 16px
+		&.p-b-m
+			margin-bottom: 20px
 
 	.control-button
 		width: 32px
@@ -644,6 +682,8 @@ body
 
 			.text-input-wrapper
 				display: none
+				&.book-c
+					display: none
 			
 			.text-input-mobile
 				display: flex
