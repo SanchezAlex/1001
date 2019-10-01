@@ -153,6 +153,7 @@ header.main-header:before
 					font-size: 14px
 					line-height: 14px
 					letter-spacing: 0.02em
+					color: $black
 
 				.label-text
 					font-family: Roboto, sans-serif
@@ -215,9 +216,13 @@ header.main-header:before
 		line-height: 24px
 		margin-top: 16px
 		width: 288px
+		&::placeholder
+			color: black
 
-	.text-input::placeholder
-		color: $black
+		&:focus
+			&::placeholder
+				color: black
+				opacity: 0.6
 
 	.checkbox-wrapper
 		display: none
@@ -235,9 +240,9 @@ header.main-header:before
 		background: #F6F6F4
 		border-radius: 4px
 		position: absolute
-		-webkit-box-shadow: 0 1px 6px #666666
-		-moz-box-shadow: 0 1px 6px #666666
-		box-shadow: 0 1px 6px #666666
+		-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+		-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
 		&.plus
 			top: 60px
 		&.minus
@@ -425,7 +430,6 @@ header.main-header:before
 				opacity: 1
 
 	.accept-button
-		background-color: $header-background
 		border-radius: 8px
 		color: $white
 		height: 64px
@@ -433,6 +437,10 @@ header.main-header:before
 		font-family: Roboto, sans-serif
 		font-weight: 500
 		font-size: 16px
+		background: rgba(255, 255, 255, 0.1)
+		span
+			color: $white
+			opacity: 0.6
 
 
 .tickets-list-header
@@ -456,8 +464,16 @@ header.main-header:before
 	height: 16px
 	width: 16px
 
+.icon-14
+	height: 14px
+	width: 14px
+
 .icon-12
 	width: 12px
+
+.icon-9-16
+	height: 16px
+	width: 9px
 
 .prices-rectangle
 	height: 6px
@@ -617,7 +633,7 @@ body
 				font-style: normal
 				font-weight: 500
 				font-size: 16px
-				line-height: 19px
+				line-height: 13px
 				color: $white
 
 			.event-name
@@ -628,7 +644,7 @@ body
 				line-height: 26px
 				margin-bottom: 10px
 				opacity: 0.8
-				padding-left: 21px
+				padding: 0 20px
 				color: $white
 
 			.event-date, .event-time, .event-place
@@ -636,7 +652,7 @@ body
 				font-style: normal
 				font-weight: normal
 				font-size: 12px
-				padding-left: 16px
+				padding: 0 16px
 				margin-bottom: 6px
 				line-height: 14px
 				opacity: 0.6
@@ -669,10 +685,10 @@ body
 			margin-bottom: -30px
 			display: flex
 			flex-direction: column
-			padding: 0 16px
+			padding: 0 16px 30px
 			&.e-ticket
 				align-items: unset
-				padding: 0 16px
+				padding: 0 16px 30px
 
 			.tickets-select-subheader
 				display: none
@@ -720,7 +736,6 @@ body
 					display: flex
 					flex-direction: column
 					margin-top: 16px
-					margin-left: 14px
 
 					.label-title
 						font-family: Roboto, sans-serif
@@ -729,6 +744,7 @@ body
 						font-size: 12px
 						line-height: 14px
 						letter-spacing: 0.02em
+						color: $black
 
 					.label-text
 						font-family: Roboto, sans-serif
@@ -746,8 +762,6 @@ body
 				font-weight: normal
 				font-size: 14px
 				line-height: 24px
-				padding-left: 16px
-				padding-top: 12px
 				opacity: 0.8
 
 			.tickets-select-header
@@ -786,9 +800,9 @@ body
 				background: #F6F6F4
 				border-radius: 4px
 				position: absolute
-				-webkit-box-shadow: 0 1px 6px #666666
-				-moz-box-shadow: 0 1px 6px #666666
-				box-shadow: 0 1px 6px #666666
+				-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+				-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
 				&.plus
 					top: 60px
 				&.minus
@@ -813,9 +827,9 @@ body
 				font-weight: 500
 				font-size: 12px
 				line-height: 20px
-				-webkit-box-shadow: 0 1px 6px #666666
-				-moz-box-shadow: 0 1px 6px #666666
-				box-shadow: 0 1px 6px #666666
+				-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+				-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
 				img
 					margin-right: 6px
 
@@ -906,10 +920,16 @@ body
 				line-height: 20px
 				width: 144px
 				height: 40px
-				background: #534c75
 				color: $white
 				border-radius: 4px
+				background: rgba(255, 255, 255, 0.1)
+				span
+					color: $white
+					opacity: 0.6
 
 				&.button-white
 					color: $black
 					background-color: $white
+					span
+						color: $black
+						opacity: 1
