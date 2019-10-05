@@ -2,6 +2,7 @@ import $ from 'jquery';
 import 'owl.carousel';
 import 'bootstrap';
 import isTouchDevice from './lib/detectTouch';
+import 'perfect-scrollbar';
 
 $(document).ready(function() {
 
