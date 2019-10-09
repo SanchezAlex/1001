@@ -59,6 +59,22 @@ header.main-header:before
 .event-name, .event-date, .event-time, .event-place
 	padding-left: 52px
 
+.event-name
+	font-size: 22px
+	font-weight: bold
+
+.event-date, .event-time, .event-place
+	font-size: 14px
+
+.event-time
+	min-width: 60px
+	padding-left: 0
+	margin-left: 52px
+	opacity: 0.8
+
+.main-header-timer
+	font-size: 22px
+
 .content
 	position: relative
 	display: flex
@@ -236,13 +252,13 @@ header.main-header:before
 	.control-button
 		width: 32px
 		height: 32px
-		left: 16px
+		left: 32px
 		background: #F6F6F4
 		border-radius: 4px
 		position: absolute
-		-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
-		-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
-		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+		//-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+		//-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+		//box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
 		&.plus
 			top: 60px
 		&.minus
@@ -360,6 +376,7 @@ header.main-header:before
 	background-color: $white
 	color: $black
 	border-radius: 20px
+	position: relative
 
 	&.e-ticket
 		min-width: 320px
@@ -375,11 +392,19 @@ header.main-header:before
 		align-items: center
 
 	.tickets-list .ticket
+		position: relative
 		background-image: url(../img/book-pages/ticket-background.png)
 		height: 80px
 		width: 256px
 		margin-bottom: 16px
 		padding: 16px 16px 16px 32px
+		.ticket-delete
+			position: absolute
+			right: 16px
+			top: 10px
+			img
+				position: absolute
+
 		.seat-place
 			font-family: Roboto, sans-serif
 			font-style: normal
@@ -467,6 +492,8 @@ header.main-header:before
 .icon-14
 	height: 14px
 	width: 14px
+	&.custom
+		height: 13px
 
 .icon-12
 	width: 12px
@@ -474,6 +501,17 @@ header.main-header:before
 .icon-9-16
 	height: 16px
 	width: 9px
+
+.icon-6
+	width: 6px
+	height: 6px
+
+.icon-location-custom
+	width: 12px
+	height: 14px
+
+.mr-8
+	margin-right: 8px
 
 .prices-rectangle
 	height: 6px
@@ -614,6 +652,8 @@ body
 
 		.event-name, .event-date, .event-time, .event-place
 			padding-left: unset
+			min-width: unset
+			margin-left: unset
 
 		.main-header-content-mobile
 			display: flex
