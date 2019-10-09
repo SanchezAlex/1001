@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'owl.carousel';
 import 'bootstrap';
 import isTouchDevice from './lib/detectTouch';
-import 'perfect-scrollbar';
+import PerfectScrollbar from 'perfect-scrollbar';
 
 $(document).ready(function() {
 
@@ -214,5 +214,12 @@ $(document).ready(function() {
   $('.soon-info__close-btn').click(function() {
     $('.soon-info__block').removeClass('active');
   });
+
+  var container = document.querySelector('.tickets-select');
+  const ps = new PerfectScrollbar(container);
+  ps.update();
+  var ticketsListContainer = document.querySelector('.tickets-list');
+  const ps2 = new PerfectScrollbar(ticketsListContainer);
+  ps2.update();
 
 });
