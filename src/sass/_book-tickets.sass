@@ -108,6 +108,22 @@ header.main-header:before
 		line
 			stroke: #F0A33B
 
+	.menu-stroke-selected-last
+		stroke: #403866
+
+.agreement-link
+	text-decoration: underline
+	color: #6C60A9
+
+a.tickets-back
+	font-style: normal
+	font-weight: normal
+	font-size: 14px
+	line-height: 16px
+	text-decoration: underline
+	color: $black
+	opacity: 0.8
+
 .content .tickets-select
 	display: flex
 	flex-direction: column
@@ -125,6 +141,10 @@ header.main-header:before
 		.header-elem
 			flex-grow: 1
 			position: relative
+			.text
+				opacity: 0.6
+			.active
+				opacity: 1
 
 	.inline-inputs-wrapper
 		display: flex
@@ -138,6 +158,8 @@ header.main-header:before
 		font-size: 16px
 		line-height: 19px
 		width: 100%
+		font-weight: 500
+		opacity: 0.8
 		max-width: 768px
 
 	.proceed-button
@@ -193,6 +215,22 @@ header.main-header:before
 		max-width: 768px
 		margin-top: 14px
 
+		.address-terms
+			width: 288px
+			.subheader
+				font-style: normal
+				font-weight: 500
+				font-size: 14px
+				line-height: 16px
+				display: flex
+				align-items: center
+				letter-spacing: 0.02em
+				margin-bottom: 6px
+			.text
+				font-size: 14px
+				opacity: 0.6
+				line-height: 20px
+
 		&.book-c
 			display: flex
 			flex-direction: row
@@ -212,14 +250,16 @@ header.main-header:before
 				margin-top: 16px
 				text-align: right
 				.header
-					font-weight: bold
 					font-size: 14px
 					line-height: 16px
 					margin-bottom: 6px
+					font-weight: 500
+					letter-spacing: 0.02em
 				.text
 					font-size: 14px
 					line-height: 20px
 					text-align: right
+					opacity: 0.6
 
 	.text-input
 		height: 48px
@@ -232,6 +272,8 @@ header.main-header:before
 		line-height: 24px
 		margin-top: 16px
 		width: 288px
+		&.text-area
+			height: unset
 		&::placeholder
 			color: black
 
@@ -246,6 +288,7 @@ header.main-header:before
 			display: flex
 		&.book-c
 			margin-top: 16px
+			width: 288px
 		&.p-b-m
 			margin-bottom: 20px
 
@@ -357,6 +400,7 @@ header.main-header:before
 		display: flex
 		justify-content: center
 		margin-top: 32px
+		margin-bottom: 36px
 
 	.lp-button
 		background-color: #403866
@@ -534,7 +578,7 @@ header.main-header:before
 	content: ''
 	position: absolute
 	left: 0
-	top: 0
+	top: -2px
 	width: 18px
 	height: 18px
 	border: 1px solid #ddd
@@ -547,7 +591,7 @@ header.main-header:before
 	height: 12px
 	background: #403866
 	position: absolute
-	top: 3px
+	top: 1px
 	left: 3px
 	border-radius: 100%
 	-webkit-transition: all 0.2s ease
@@ -575,8 +619,9 @@ header.main-header:before
 	-moz-user-select: none
 	-ms-user-select: none
 	user-select: none
-	font-size: 12px
+	font-size: 14px
 	font-family: Roboto, sans-serif
+	line-height: 22px
 
 .checkbox-container input
 	position: absolute
@@ -752,6 +797,8 @@ body
 				border-radius: 4px
 				line-height: 24px
 				margin-top: 16px
+				&.text-area
+					height: unset
 				&:focus
 					&::placeholder
 						color: black
