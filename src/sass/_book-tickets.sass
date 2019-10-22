@@ -172,6 +172,8 @@ a.tickets-back
 			border-radius: 6px
 			height: 48px
 			width: 240px
+			&:hover
+				background-color: #2D2747
 
 	.delivery-types-wrapper-m
 			width: 100%
@@ -204,7 +206,7 @@ a.tickets-back
 					margin-top: 14px
 
 
-	.text-input-mobile
+	.text-input-mobile, .input-error-message-mobile
 		display: none
 
 	.text-input-wrapper
@@ -281,6 +283,15 @@ a.tickets-back
 			&::placeholder
 				color: black
 				opacity: 0.6
+		&.erred
+			border-color: red
+			color: red
+
+	.input-error-message
+		color: red
+		width: 288px
+		margin-top: 4px
+		font-size: 12px
 
 	.checkbox-wrapper
 		display: none
@@ -302,6 +313,9 @@ a.tickets-back
 		//-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
 		//-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
 		//box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+		display: flex
+		align-items: center
+		justify-content: center
 		&.plus
 			top: 60px
 		&.minus
@@ -506,7 +520,9 @@ a.tickets-back
 		font-family: Roboto, sans-serif
 		font-weight: 500
 		font-size: 16px
-		background: rgba(255, 255, 255, 0.1)
+		background-color: #403866
+		&:hover
+			background-color: #2D2747
 		span
 			color: $white
 			opacity: 0.6
@@ -807,6 +823,12 @@ body
 			.text-input-mobile::placeholder
 				color: $black
 
+			.input-error-message-mobile
+				display: flex
+				color: red
+				margin-top: 4px
+				font-size: 12px
+
 			.inline-inputs-wrapper
 				display: flex
 				flex-direction: row
@@ -895,6 +917,9 @@ body
 				-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
 				-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
 				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+				display: flex
+				align-items: center
+				justify-content: center
 				&.plus
 					top: 60px
 				&.minus
@@ -1010,23 +1035,32 @@ body
 				img
 					margin-right: 12px
 
-			.accept-button-m
+			.button-disabled
 				font-family: Roboto, sans-serif
 				font-size: 14px
 				font-weight: 500
 				line-height: 20px
 				width: 144px
 				height: 40px
-				color: $white
 				border-radius: 4px
+				color: $white
 				background: rgba(255, 255, 255, 0.1)
 				span
 					color: $white
 					opacity: 0.6
 
-				&.button-white
+			.button-white
+				font-family: Roboto, sans-serif
+				font-size: 14px
+				font-weight: 500
+				line-height: 20px
+				width: 144px
+				height: 40px
+				border-radius: 4px
+				color: $black
+				background-color: $white
+				&:hover
+					background-color: #DADADA
+				span
 					color: $black
-					background-color: $white
-					span
-						color: $black
-						opacity: 1
+					opacity: 1
