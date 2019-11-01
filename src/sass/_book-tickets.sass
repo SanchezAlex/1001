@@ -165,7 +165,7 @@ a.tickets-back
 	.proceed-button
 		width: 100%
 		max-width: 768px
-		margin-top: 28px
+		margin: 28px 0
 		button
 			background-color: #403866
 			color: $white
@@ -218,7 +218,7 @@ a.tickets-back
 		margin-top: 14px
 
 		.address-terms
-			width: 288px
+			width: unset
 			.subheader
 				font-style: normal
 				font-weight: 500
@@ -302,6 +302,8 @@ a.tickets-back
 			width: 288px
 		&.p-b-m
 			margin-bottom: 20px
+		&.full-width
+			width: unset
 
 	.control-button
 		width: 32px
@@ -345,6 +347,26 @@ a.tickets-back
 			max-width: 768px
 			padding-bottom: 10px
 			margin-bottom: 28px
+
+		&.ticket-map
+			margin-left: 32px
+			margin-top: 22px
+			justify-content: left
+			font-size: 14px
+			line-height: 16px
+
+	.tickets-select-header-place
+		font-family: Roboto, sans-serif
+		font-style: normal
+		font-weight: bold
+		font-size: 22px
+		display: flex
+		text-align: center
+		color: #6769BE
+		text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+		text-align: center
+		justify-content: center
+		margin: 24px 32px 0 32px
 
 	.tickets-select-header-mobile
 		display: none
@@ -513,19 +535,21 @@ a.tickets-back
 				opacity: 1
 
 	.accept-button
-		border-radius: 8px
+		border-radius: 30px
 		color: $white
 		height: 64px
 		width: 256px
 		font-family: Roboto, sans-serif
 		font-weight: 500
 		font-size: 16px
-		background-color: #403866
+		background-color: #FC472C
 		&:hover
-			background-color: #2D2747
+			background-color: #bc3521
 		span
 			color: $white
 			opacity: 0.6
+	.accept-button:disabled, .accept-button[disabled]
+		background-color: #403866
 
 
 .tickets-list-header
@@ -878,7 +902,7 @@ body
 				line-height: 24px
 				opacity: 0.8
 
-			.tickets-select-header
+			.tickets-select-header, .tickets-select-header-place
 				display: none
 				opacity: 0.8
 
