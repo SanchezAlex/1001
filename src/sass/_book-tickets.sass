@@ -178,13 +178,22 @@ a.tickets-back
 		&.no-top
 			margin-top: 0
 		button
-			background-color: #403866
+			border-radius: 30px
 			color: $white
-			border-radius: 6px
-			height: 48px
+			height: 50px
 			width: 240px
+			font-family: Roboto, sans-serif
+			font-weight: 500
+			font-size: 16px
+			background-color: #FC472C
 			&:hover
-				background-color: #2D2747
+				background-color: #bc3521
+			span
+				color: $white
+				opacity: 0.6
+
+	.proceed-button:disabled, .proceed-button[disabled]
+		background-color: #403866
 
 	.delivery-types-wrapper-m
 			width: 100%
@@ -543,22 +552,22 @@ a.tickets-back
 			&.text-bold
 				opacity: 1
 
-	.accept-button
-		border-radius: 30px
+.accept-button
+	border-radius: 30px
+	color: $white
+	height: 50px
+	width: 256px
+	font-family: Roboto, sans-serif
+	font-weight: 500
+	font-size: 16px
+	background-color: #FC472C
+	&:hover
+		background-color: #bc3521
+	span
 		color: $white
-		height: 50px
-		width: 256px
-		font-family: Roboto, sans-serif
-		font-weight: 500
-		font-size: 16px
-		background-color: #FC472C
-		&:hover
-			background-color: #bc3521
-		span
-			color: $white
-			opacity: 0.6
-	.accept-button:disabled, .accept-button[disabled]
-		background-color: #403866
+		opacity: 0.6
+.accept-button:disabled, .accept-button[disabled]
+	background-color: #403866
 
 
 .tickets-list-header
