@@ -50,6 +50,14 @@ header.main-header:before
 	display: flex
 	align-items: flex-end
 	justify-content: space-between
+	max-width: 1050px
+	width: 100%
+
+.info-inner-wrapper
+	display: flex
+	justify-content: space-between
+	width: 100%
+	align-items: flex-end
 
 .main-header-logo
 	display: flex
@@ -62,6 +70,7 @@ header.main-header:before
 .event-name
 	font-size: 22px
 	font-weight: bold
+	line-height: 18px
 
 .event-date, .event-time, .event-place
 	font-size: 14px
@@ -166,6 +175,8 @@ a.tickets-back
 		width: 100%
 		max-width: 768px
 		margin: 28px 0
+		&.no-top
+			margin-top: 0
 		button
 			background-color: #403866
 			color: $white
@@ -215,7 +226,6 @@ a.tickets-back
 		align-items: flex-start
 		width: 100%
 		max-width: 768px
-		margin-top: 14px
 
 		.address-terms
 			width: unset
@@ -364,9 +374,8 @@ a.tickets-back
 		text-align: center
 		color: #6769BE
 		text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
-		text-align: center
 		justify-content: center
-		margin: 24px 32px 0 32px
+		margin: 24px 64px 0 64px
 
 	.tickets-select-header-mobile
 		display: none
@@ -465,7 +474,7 @@ a.tickets-back
 
 	.tickets-list
 		display: flex
-		padding-top: 28px
+		padding: 20px 0
 		overflow-y: auto
 		flex-direction: column
 		justify-content: flex-start
@@ -537,7 +546,7 @@ a.tickets-back
 	.accept-button
 		border-radius: 30px
 		color: $white
-		height: 64px
+		height: 50px
 		width: 256px
 		font-family: Roboto, sans-serif
 		font-weight: 500
